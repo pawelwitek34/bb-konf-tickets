@@ -1,19 +1,19 @@
 {"domek_room2":{
   "available": 12,
-  "remaining": 0
+  "remaining": 1
 },"domek_room4":{
   "available": 36,
   "remaining": 12
 },"domek_room4_premium":{
   "available": 16,
-  "remaining": 12
+  "remaining": 16
 },"hotel_room2":{
   "available": 34,
-  "remaining": 12
+  "remaining": 15
 },"hotel_room2_solo":{
   "available": 34,
-  "remaining": 
+  "remaining": 1
 },"hotel_room4":{
   "available": 30,
-  "remaining": 6
+  "remaining": 8
 }}
