@@ -1,16 +1,19 @@
 {"domek_room2":{
   "total": 12,
-  "remaining": 0
+  "remaining": 1
 },"domek_room4":{
   "total": 36,
   "remaining": 12
 },"domek_room4_premium":{
   "total": 16,
-  "remaining": 12
+  "remaining": 16
 },"hotel_room2":{
   "total": 34,
-  "remaining": 12
+  "remaining": 15
+},"hotel_room2_solo":{
+  "total": 34,
+  "remaining": 1
 },"hotel_room4":{
   "total": 30,
-  "remaining": 6
+  "remaining": 8
 }}
