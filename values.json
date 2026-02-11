@@ -1,19 +1,16 @@
 {"domek_room2":{
-  "total": 12,
-  "remaining": 0
+  "total": 0,
+  "remaining": -12
 },"domek_room4":{
-  "total": 36,
-  "remaining": 0
+  "total": 0,
+  "remaining": -36
 },"domek_room4_premium":{
-  "total": 16,
-  "remaining": 12
+  "total": 0,
+  "remaining": -4
 },"hotel_room2":{
-  "total": 34,
-  "remaining": 8
-},"hotel_room2_solo":{
-  "total": 34,
-  "remaining": 0
+  "total": 0,
+  "remaining": -28
 },"hotel_room4":{
-  "total": 30,
-  "remaining": 22
+  "total": 0,
+  "remaining": -8
 }}
