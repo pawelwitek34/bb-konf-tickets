@@ -1,0 +1,2613 @@
+<!-- INTERAKTYWNY CENNIK CAMPU - WERSJA LANDINGI -->
+<!-- WAŻNE: Upewnij się, że strona ma tag viewport: <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<!-- Breakpoints: Mobile <640px | Mały Tablet 640-767px | Tablet 768-1023px | Desktop 1024px+ -->
+<div id="camp-pricing-widget-2024">
+<style>
+    /* Reset box-sizing dla całego widgetu */
+    #camp-pricing-widget-2024 *,
+    #camp-pricing-widget-2024 *::before,
+    #camp-pricing-widget-2024 *::after {
+        box-sizing: border-box;
+    }
+    
+    /* Główny kontener */
+    
+    #camp-pricing-widget-2024 {
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+        padding: 24px 12px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    @media (min-width: 640px) {
+        #camp-pricing-widget-2024 {
+            padding: 48px 16px;
+        }
+    }
+    
+    .cpw-container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-container {
+            max-width: 1024px;
+        }
+    }
+    
+    .cpw-header {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-header {
+            margin-bottom: 40px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-header {
+            margin-bottom: 44px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-header {
+            margin-bottom: 48px;
+        }
+    }
+    
+    .cpw-title {
+        font-size: 26px;
+        font-weight: 800;
+        color: #370F11;
+        margin-bottom: 16px;
+        line-height: 1.2;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-title {
+            font-size: 28px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-title {
+            font-size: 36px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-title {
+            font-size: 42px;
+        }
+    }
+    
+    .cpw-subtitle {
+        font-size: 15px;
+        color: #64748b;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 8px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-subtitle {
+            font-size: 16px;
+            max-width: 480px;
+            padding: 0;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-subtitle {
+            font-size: 17px;
+            max-width: 520px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-subtitle {
+            font-size: 18px;
+            max-width: 560px;
+        }
+    }
+    
+    .cpw-urgency-box {
+        display: inline-block;
+        background: rgba(255, 151, 6, 0.2);
+        border-left: 4px solid #FF9706;
+        color: #370F11;
+        padding: 10px 12px;
+        border-radius: 8px;
+        margin-top: 20px;
+        font-weight: 700;
+        font-size: 13px;
+        max-width: 100%;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-urgency-box {
+            padding: 12px 14px;
+            font-size: 14px;
+            margin-top: 24px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-urgency-box {
+            padding: 14px 16px;
+            font-size: 15px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-urgency-box {
+            padding: 16px;
+            font-size: 16px;
+        }
+    }
+    
+    .cpw-main-panel {
+        background: white;
+        padding: 20px 16px;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-main-panel {
+            padding: 24px 20px;
+            border-radius: 14px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-main-panel {
+            padding: 28px 24px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-main-panel {
+            padding: 32px;
+            border-radius: 16px;
+        }
+    }
+    
+    .cpw-step {
+        margin-bottom: 24px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-step {
+            margin-bottom: 28px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-step {
+            margin-bottom: 32px;
+        }
+    }
+    
+    .cpw-step.cpw-hidden {
+        display: none;
+    }
+    
+    .cpw-step-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #370F11;
+        margin-bottom: 4px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-step-title {
+            font-size: 19px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-step-title {
+            font-size: 21px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-step-title {
+            font-size: 24px;
+        }
+    }
+    
+    .cpw-step-desc {
+        color: #94a3b8;
+        margin-bottom: 16px;
+        font-size: 14px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-step-desc {
+            font-size: 15px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-step-desc {
+            font-size: 16px;
+        }
+    }
+    
+    .cpw-options-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-options-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+    }
+    
+    .cpw-choice-btn {
+        padding: 16px 12px;
+        border-radius: 8px;
+        border: 2px solid #e2e8f0;
+        background: #f8fafc;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 15px;
+        transition: all 0.2s ease;
+        text-align: center;
+        position: relative;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-choice-btn {
+            padding: 18px 14px;
+            font-size: 16px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-choice-btn {
+            padding: 20px 16px;
+            font-size: 17px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-choice-btn {
+            padding: 24px;
+            font-size: 18px;
+        }
+    }
+    
+    .cpw-choice-btn:hover {
+        background: #e2e8f0;
+    }
+    
+    .cpw-choice-btn.cpw-selected {
+        background: #370F11;
+        color: white;
+        border-color: #370F11;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cpw-choice-extended {
+        text-align: left;
+    }
+    
+    .cpw-choice-icon {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-choice-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-choice-icon {
+            font-size: 30px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-choice-icon {
+            font-size: 32px;
+        }
+    }
+    
+    .cpw-choice-title {
+        font-weight: 700;
+        font-size: 15px;
+        margin-top: 6px;
+        margin-bottom: 4px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-choice-title {
+            font-size: 16px;
+            margin-top: 8px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-choice-title {
+            font-size: 17px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-choice-title {
+            font-size: 18px;
+        }
+    }
+    
+    .cpw-choice-desc {
+        color: #64748b;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-choice-desc {
+            font-size: 14px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-choice-desc {
+            font-size: 14px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-choice-desc {
+            font-size: 14px;
+        }
+    }
+    
+    .cpw-choice-btn.cpw-selected .cpw-choice-desc {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .cpw-results {
+        margin-top: 32px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-results {
+            margin-top: 36px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-results {
+            margin-top: 40px;
+        }
+    }
+    
+    .cpw-price-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 16px;
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-price-cards {
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+    }
+    
+    .cpw-price-card {
+        position: relative;
+        background: #f8fafc;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 20px 16px;
+        display: flex;
+        flex-direction: column;
+        animation: cpwFadeIn 0.5s forwards;
+    }
+
+    @media (min-width: 640px) {
+        .cpw-price-card {
+            padding: 24px 20px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .cpw-price-card {
+            padding: 28px 24px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .cpw-price-card {
+            padding: 32px;
+        }
+    }
+
+    .cpw-card-top {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .cpw-card-bottom {
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+    }
+    
+    @keyframes cpwFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .cpw-price-card.cpw-popular {
+        border-color: #ED6A11;
+    }
+
+    .cpw-price-card.cpw-sold-out {
+        background: #e2e8f0;
+        border-color: #cbd5e1;
+        color: #475569;
+        cursor: not-allowed;
+    }
+
+    .cpw-price-card.cpw-sold-out * {
+        cursor: inherit;
+    }
+
+    .cpw-price-card.cpw-sold-out .cpw-card-title {
+        color: #475569;
+    }
+
+    .cpw-price-card.cpw-sold-out .cpw-card-desc,
+    .cpw-price-card.cpw-sold-out .cpw-price-info,
+    .cpw-price-card.cpw-sold-out .cpw-price-saved,
+    .cpw-price-card.cpw-sold-out .cpw-payment-note {
+        color: #64748b;
+    }
+
+    .cpw-price-card.cpw-sold-out .cpw-price-amount {
+        color: #475569;
+    }
+
+    .cpw-price-card.cpw-sold-out .cpw-price-display {
+        opacity: 0.85;
+    }
+
+    .cpw-price-card.cpw-sold-out .cpw-price-strike::after {
+        background: #94a3b8;
+    }
+
+    .cpw-price-card.cpw-sold-out .cpw-payment-btn {
+        background: #cbd5e1;
+        border-color: #cbd5e1;
+        color: #64748b;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    .cpw-price-card.cpw-sold-out .cpw-payment-btn.cpw-selected {
+        background: #cbd5e1;
+        color: #64748b;
+    }
+
+    .cpw-sold-out-badge {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #475569;
+        color: #e2e8f0;
+        font-weight: 700;
+        font-size: 11px;
+        padding: 3px 10px;
+        border-radius: 20px;
+        text-align: center;
+        display: inline-block;
+        box-shadow: 0 6px 12px rgba(71, 85, 105, 0.2);
+        text-transform: uppercase;
+    }
+
+    @media (min-width: 640px) {
+        .cpw-sold-out-badge {
+            font-size: 12px;
+            padding: 4px 12px;
+        }
+    }
+
+    .cpw-cta-btn.cpw-disabled {
+        background: #cbd5e1;
+        color: #475569;
+        cursor: not-allowed;
+        pointer-events: none;
+        box-shadow: none;
+    }
+
+    .cpw-cta-btn.cpw-disabled:hover {
+        background: #cbd5e1;
+    }
+
+    .cpw-price-card.cpw-sold-out .cpw-cta-icon {
+        display: none;
+    }
+
+    .cpw-inline-countdown {
+        font-weight: 500;
+        white-space: nowrap;
+        font-size:90%;
+    }
+    
+    .cpw-popular-badge {
+        position: absolute;
+        top: -10px;
+        right: 15px;
+        background: #ED6A11;
+        color: white;
+        font-weight: 700;
+        font-size: 11px;
+        padding: 3px 10px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transform: rotate(5deg);
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-popular-badge {
+            font-size: 12px;
+            padding: 4px 12px;
+            right: 20px;
+        }
+    }
+    
+    .cpw-card-badges {
+        min-height: 64px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    .cpw-card-labels {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 0;
+    }
+
+    .cpw-card-label {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 10px;
+        font-size: 11px;
+        font-weight: 600;
+        border-radius: 12px;
+        letter-spacing: 0.3px;
+        line-height: 1;
+        white-space: nowrap;
+        background-color: #fff8ed;
+    border: 1px solid #fcdcac;
+    color: #793415;
+    text-transform: none;
+    }
+
+    .cpw-sold-out .cpw-card-label{
+        background-color: #f6f6f6;
+        border: 1px solid #d1d1d1;
+        color: #454545;
+    }
+
+    .cpw-card-alerts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        margin-bottom: 0;
+    }
+
+    .cpw-card-alert {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 10px;
+        font-size: 11px;
+        font-weight: 600;
+        border-radius: 12px;
+        letter-spacing: 0.3px;
+        line-height: 1;
+        background: #fff1f2;
+        border: 1px solid #fecdd3;
+        color: #9f1239;
+        text-transform: none;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+
+    @media (min-width: 640px) {
+        .cpw-card-label {
+            font-size: 12px;
+            padding: 5px 12px;
+        }
+
+        .cpw-card-alert {
+            font-size: 12px;
+            padding: 5px 12px;
+        }
+
+        .cpw-card-alert.cpw-gender-exclusive {
+            background: #dc2626;
+            border: 1px solid #dc2626;
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+
+        .cpw-card-alert.cpw-soldout-other-gender {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .cpw-card-badges {
+            min-height: 76px;
+        }
+    }
+
+    .cpw-card-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #370F11;
+        margin-bottom: 8px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-card-title {
+            font-size: 19px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-card-title {
+            font-size: 20px;
+        }
+    }
+    
+    .cpw-card-desc {
+        color: #64748b;
+        margin-bottom: 20px;
+        margin-top: 4px;
+        font-size: 14px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-card-desc {
+            font-size: 15px;
+            margin-bottom: 24px;
+        }
+    }
+    
+    .cpw-payment-selector {
+        margin-bottom: 4px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-payment-selector {
+            margin-bottom: 4px;
+        }
+    }
+    
+    .cpw-payment-label {
+        font-size: 13px;
+        color: #64748b;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-payment-label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+    
+    .cpw-payment-toggle {
+        display: flex;
+        background: #e2e8f0;
+        border-radius: 8px;
+        padding: 4px;
+    }
+    
+    .cpw-payment-btn {
+        flex: 1;
+        padding: 8px 4px;
+        border-radius: 6px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 13px;
+        transition: all 0.2s;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-payment-btn {
+            font-size: 14px;
+            padding: 8px;
+        }
+    }
+    
+    .cpw-payment-btn.cpw-selected {
+        background: #FFF5E6;
+        color: #370F11;
+        font-weight: 600;
+    }
+
+    .cpw-price-display {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 12px 0 16px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-price-display {
+            margin: 16px 0 18px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-price-display {
+            margin: 20px 0 20px;
+        }
+    }
+    
+    .cpw-price-amount {
+        font-size: 32px;
+        font-weight: 800;
+        color: #370F11;
+        line-height: 1;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 6px;
+        min-height: 52px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-price-amount {
+            font-size: 36px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-price-amount {
+            font-size: 42px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-price-amount {
+            font-size: 48px;
+        }
+    }
+    
+    .cpw-installment-prefix {
+        font-size: 18px;
+        font-weight: 600;
+        color: #64748b;
+        margin-right: 6px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-installment-prefix {
+            font-size: 20px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-installment-prefix {
+            font-size: 22px;
+            margin-right: 8px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-installment-prefix {
+            font-size: 24px;
+        }
+    }
+    
+    .cpw-price-original {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 26px;
+        margin-bottom: 12px;
+    }
+    
+    .cpw-price-original.cpw-hidden {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .cpw-price-info {
+        margin-top: 0px;
+        margin-bottom: 4px;
+        font-size: 11px;
+        color: #475569;
+        font-weight: 400;
+        text-align: center;
+        min-height: 16px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-price-info {
+            font-size: 12px;
+        }
+    }
+    
+    .cpw-price-strike {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        color: #370F11;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-price-strike {
+            font-size: 20px;
+        }
+    }
+    
+    .cpw-price-strike::after {
+        content: '';
+        position: absolute;
+        top: 52%;
+        left: -6%;
+        right: -6%;
+        height: 2px;
+        background: #ef4444;
+        transform: rotate(-12deg);
+        transform-origin: center;
+    }
+    
+    .cpw-price-saved {
+        margin-top: 8px;
+        font-weight: 600;
+        color: #16a34a;
+        font-size: 14px;
+        min-height: 20px;
+    }
+
+    .cpw-price-saved.cpw-installments-selected {
+        color: #370F11;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-price-saved {
+            font-size: 15px;
+        }
+    }
+    
+    .cpw-cta-btn {
+        display: block;
+        width: 100%;
+        background: #370F11;
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 14px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.2s;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        margin-top: 0;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-cta-btn {
+            font-size: 16px;
+            padding: 15px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-cta-btn {
+            padding: 16px;
+        }
+    }
+    
+    .cpw-cta-btn:hover {
+        background: #542123;
+    }
+    
+    .cpw-cta-icon {
+        display: inline-block;
+        margin-left: 8px;
+        font-size: 18px;
+        line-height: 1;
+        transition: transform 0.2s;
+    }
+    
+    .cpw-cta-btn:hover .cpw-cta-icon {
+        transform: translateX(4px);
+    }
+    
+    .cpw-footer {
+        text-align: center;
+        margin-top: 32px;
+        color: #94a3b8;
+        font-size: 14px;
+    }
+    
+    @media (min-width: 640px) {
+        .cpw-footer {
+            margin-top: 40px;
+            font-size: 15px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .cpw-footer {
+            margin-top: 44px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .cpw-footer {
+            margin-top: 48px;
+            font-size: 16px;
+        }
+    }
+    
+    .cpw-footer a {
+        color: #ED6A11;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    
+    .cpw-footer a:hover {
+        text-decoration: underline;
+    }
+  
+  /* Licznik czasu */
+.cpw-countdown-container {
+    text-align: center;
+    margin-top: 24px;
+    padding: 20px;
+    background: linear-gradient(135deg, #FFF5E6 0%, #FFEFD5 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(237, 106, 17, 0.1);
+}
+
+@media (min-width: 640px) {
+    .cpw-countdown-container {
+        margin-top: 28px;
+        padding: 24px;
+    }
+}
+
+.cpw-countdown-headline {
+    font-size: 16px;
+    font-weight: 700;
+    color: #370F11;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+      margin-block-start: 0;
+
+}
+
+@media (min-width: 640px) {
+    .cpw-countdown-headline {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
+
+.cpw-countdown {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+@media (min-width: 640px) {
+    .cpw-countdown {
+        gap: 20px;
+    }
+}
+
+.cpw-countdown-item {
+    background: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    min-width: 60px;
+}
+
+@media (min-width: 640px) {
+    .cpw-countdown-item {
+        padding: 16px 20px;
+        min-width: 80px;
+    }
+}
+
+.cpw-countdown-value {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ED6A11;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 640px) {
+    .cpw-countdown-value {
+        font-size: 32px;
+    }
+}
+
+.cpw-countdown-label {
+    font-size: 10px;
+    color: #64748b;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+}
+
+@media (min-width: 640px) {
+    .cpw-countdown-label {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+}
+
+.cpw-payment-note {
+    font-size: 11px;
+    color: #ED6A11    ;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media (min-width: 640px) {
+    .cpw-payment-note {
+        font-size: 12px;
+    }
+}
+
+.cpw-countdown-deadline {
+    font-size: 11px;
+    color: #475569;
+    margin-top: 14px;
+}
+
+@media (min-width: 640px) {
+    .cpw-countdown-deadline {
+        font-size: 12px;
+    }
+}
+
+/* Komponent ostatnich miejsc - wrapper przyklejony do dołu karty */
+.cpw-availability-wrapper {
+    margin-top: 12px;
+}
+
+.cpw-availability-wrapper.cpw-availability-wrapper--empty {
+    margin-top: 0;
+}
+
+.cpw-availability-alert {
+    /*
+    background: #FFF8F0;
+    border: 1px solid #FFE4CC;
+    border-radius: 8px;
+    padding: 12px 14px;*/
+    padding:0 12px;
+}
+
+@media (min-width: 640px) {
+    .cpw-availability-alert {
+        padding:0 10px;
+    }
+}
+
+.cpw-availability-text {
+    font-size: 13px;
+    color: #370F11;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+@media (min-width: 640px) {
+    .cpw-availability-text {
+        font-size: 14px;
+    }
+}
+
+.cpw-availability-text strong {
+    font-weight: 700;
+    color: #ED6A11;
+}
+
+.cpw-availability-progress {
+    width: 100%;
+    height: 6px;
+    background: #E8E8E8;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cpw-availability-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ED6A11 0%, #FF9706 100%);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* Modal potwierdzenia płci */
+.cpw-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 16px;
+}
+
+.cpw-modal-overlay.cpw-modal-hidden {
+    display: none;
+}
+
+.cpw-modal-dialog {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 20px;
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: cpwFadeIn 0.25s ease forwards;
+}
+
+@media (min-width: 640px) {
+    .cpw-modal-dialog {
+        padding: 32px 28px;
+    }
+}
+
+.cpw-modal-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.cpw-modal-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: #370F11;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    margin-top: 0;
+}
+
+@media (min-width: 640px) {
+    .cpw-modal-title {
+        font-size: 19px;
+    }
+}
+
+.cpw-modal-message {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+
+@media (min-width: 640px) {
+    .cpw-modal-message {
+        font-size: 15px;
+    }
+}
+
+.cpw-modal-highlight {
+    color: #370F11;
+    font-weight: 700;
+}
+
+.cpw-modal-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+@media (min-width: 640px) {
+    .cpw-modal-buttons {
+        gap: 12px;
+    }
+}
+
+.cpw-modal-btn {
+    flex: 1;
+    padding: 12px 8px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+    font-family: inherit;
+    line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+    .cpw-modal-btn {
+        font-size: 15px;
+        padding: 13px 10px;
+    }
+}
+
+.cpw-modal-cancel {
+    background: #f1f5f9;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+
+.cpw-modal-cancel:hover {
+    background: #e2e8f0;
+}
+
+.cpw-modal-confirm {
+    background: #370F11;
+    color: white;
+}
+
+.cpw-modal-confirm:hover {
+    background: #542123;
+}
+</style>
+
+<div class="cpw-container">
+    <!-- Nagłówek -->
+    <div class="cpw-header">
+        <h1 class="cpw-title">Cennik</h1>
+        <p class="cpw-subtitle">Wybierz najlepszą dla Ciebie opcję</p>
+        <!-- Licznik czasu -->
+<div class="cpw-countdown-container">
+    <h3 class="cpw-countdown-headline">Koniec 2. Puli biletów za:</h3>
+    <div class="cpw-countdown">
+        <div class="cpw-countdown-item">
+            <div class="cpw-countdown-value" id="cpw-days">00</div>
+            <div class="cpw-countdown-label">dni</div>
+        </div>
+        <div class="cpw-countdown-item">
+            <div class="cpw-countdown-value" id="cpw-hours">00</div>
+            <div class="cpw-countdown-label">godzin</div>
+        </div>
+        <div class="cpw-countdown-item">
+            <div class="cpw-countdown-value" id="cpw-minutes">00</div>
+            <div class="cpw-countdown-label">minut</div>
+        </div>
+        <div class="cpw-countdown-item">
+            <div class="cpw-countdown-value" id="cpw-seconds">00</div>
+            <div class="cpw-countdown-label">sekund</div>
+        </div>
+    </div>
+    <p class="cpw-countdown-deadline">Niższa cena tylko do: <span id="cpw-deadline"></span></p>
+</div>
+    </div>
+
+    <!-- Panel główny -->
+    <div class="cpw-main-panel">
+        
+        <!-- Krok 1 -->
+        <div class="cpw-step" id="cpw-step-attendance">
+            <h2 class="cpw-step-title">Krok 1: Jak przyjeżdżasz?</h2>
+            <p class="cpw-step-desc"></p>
+            <div class="cpw-options-grid">
+                <button class="cpw-choice-btn" data-cpw-value="solo">
+                    👤 Jadę sam(a)
+                </button>
+                <button class="cpw-choice-btn" data-cpw-value="duo">
+                    👥 Jedziemy w 2 osoby
+                </button>
+            </div>
+        </div>
+
+        <!-- Krok 2 (solo) -->
+        <div class="cpw-step cpw-hidden" id="cpw-step-accommodation">
+            <h2 class="cpw-step-title">Krok 2: Jaki standard preferujesz?</h2>
+            <p class="cpw-step-desc">Zdecyduj, czy wolisz komfort hotelu, czy bliskość natury</p>
+            <div class="cpw-options-grid">
+
+                <button class="cpw-choice-btn cpw-choice-extended" data-cpw-value="domek">
+                    <div class="cpw-choice-icon">🌲</div>
+                    <div class="cpw-choice-title">Domek w lesie</div>
+                    <div class="cpw-choice-desc">Bliżej natury i w kameralnej atmosferze, ale niższy standard</div>
+                </button>
+                              <button class="cpw-choice-btn cpw-choice-extended" data-cpw-value="hotel">
+                    <div class="cpw-choice-icon">🏨</div>
+                    <div class="cpw-choice-title">Hotel ***</div>
+                    <div class="cpw-choice-desc">Wyższy standard pokoi</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Wyniki -->
+        <div id="cpw-results"></div>
+    </div>
+
+    <div class="cpw-footer">
+        <p>Masz pytania? <a href="#a1VF9iD8Op6z3QUsGTTIzqqUo904ehqT">Skontaktuj się z nami</a></p>
+    </div>
+</div>
+
+<!-- Modal potwierdzenia płci -->
+<div id="cpw-gender-modal" class="cpw-modal-overlay cpw-modal-hidden" role="dialog" aria-modal="true" aria-labelledby="cpw-modal-title">
+    <div class="cpw-modal-dialog">
+        <div class="cpw-modal-icon" id="cpw-modal-icon">⚠️</div>
+        <h3 class="cpw-modal-title" id="cpw-modal-title">Potwierdzenie</h3>
+        <p class="cpw-modal-message" id="cpw-modal-message"></p>
+        <div class="cpw-modal-buttons">
+            <button class="cpw-modal-btn cpw-modal-cancel" id="cpw-modal-cancel">Anuluj</button>
+            <button class="cpw-modal-btn cpw-modal-confirm" id="cpw-modal-confirm">Tak, potwierdzam</button>
+        </div>
+    </div>
+</div>
+
+<script>
+(function() {
+    'use strict';
+
+    // ========================================
+    // PRZEŁĄCZNIK TRYBU DEBUGOWANIA
+    // ========================================
+    // Ustaw na true aby włączyć logi w konsoliĺĺ
+    // Ustaw na false aby wyłączyć logi w konsoli
+    const DEBUG_MODE = false;
+
+    // Funkcja pomocnicza do logowania
+    function debugLog(message, data) {
+        if (DEBUG_MODE) {
+            if (data !== undefined) {
+                console.log('[PRICING-WIDGET] ' + message, data);
+            } else {
+                console.log('[PRICING-WIDGET] ' + message);
+            }
+        }
+    }
+
+    // Tryb wyprzedania: 'pool' = wyprzedano w tej puli (z info o nowej puli)
+    //                   'total' = wyprzedano całkowicie (bez info o nowej puli)
+    const SOLDOUT_MODE = 'total';
+
+    const COUNTDOWN_CONFIG = {
+        year: 2026,
+        month: 2, // Luty (1-12, później odejmujemy 1 przy tworzeniu daty)
+        day: 28,
+        hour: 23,
+        minute: 59,
+        second: 59
+    };
+    
+    const COUNTDOWN_MONTH_NAMES = [
+        'stycznia',
+        'lutego',
+        'marca',
+        'kwietnia',
+        'maja',
+        'czerwca',
+        'lipca',
+        'sierpnia',
+        'września',
+        'października',
+        'listopada',
+        'grudnia'
+    ];
+    
+    function getCountdownTargetDate() {
+        const cfg = COUNTDOWN_CONFIG;
+        return new Date(cfg.year, cfg.month - 1, cfg.day, cfg.hour, cfg.minute, cfg.second);
+    }
+    
+    function getPriceDeadlineLabel() {
+        const targetDate = getCountdownTargetDate();
+        const day = targetDate.getDate();
+        const monthName = COUNTDOWN_MONTH_NAMES[targetDate.getMonth()];
+        return `Cena wzrośnie po ${day} ${monthName}`;
+    }
+
+    function getNextAvailabilityLabel() {
+        const targetDate = getCountdownTargetDate();
+        const day = targetDate.getDate();
+        const monthName = COUNTDOWN_MONTH_NAMES[targetDate.getMonth()];
+        return `Nowa pula miejsc dostępna po ${day} ${monthName}`;
+    }
+
+    function formatInlineCountdownLabel(days, hours, minutes, seconds) {
+        const d = String(days).padStart(2, '0');
+        const h = String(hours).padStart(2, '0');
+        const m = String(minutes).padStart(2, '0');
+        const s = String(seconds).padStart(2, '0');
+        return `${d}d ${h}g ${m}m ${s}s`;
+    }
+
+    function getInlineCountdownLabel() {
+        const targetDate = getCountdownTargetDate();
+        const now = new Date();
+        const difference = targetDate - now;
+
+        if (difference <= 0) {
+            return formatInlineCountdownLabel(0, 0, 0, 0);
+        }
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        return formatInlineCountdownLabel(days, hours, minutes, seconds);
+    }
+    
+    // Czekamy na załadowanie DOM
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCampWidget);
+    } else {
+        initCampWidget();
+    }
+    
+    // URL do zewnętrznego JSON z danymi dostępności
+    const AVAILABILITY_URL = 'https://pawelwitek34.github.io/bb-konf-tickets/values.json';
+
+    // Domyślne wartości dostępności (używane gdy pobieranie się nie powiedzie)
+    // Ustawione na 50% wartości początkowych
+    const DEFAULT_AVAILABILITY = {
+        hotel_room2: {
+            total: 34,
+            remaining: 6
+        },
+        hotel_room4: {
+            total: 30,
+            remaining: 0
+        },
+        domek_room2: {
+            total: 12,
+            remaining: 0
+        },
+        domek_room4: {
+            total: 36,
+            remaining: 8
+        },
+        domek_room4_premium: {
+            total: 16,
+            remaining: 6
+        },
+        hotel_room2_solo: {
+            total: 34,
+            remaining: 0
+        }
+    };
+
+    // Funkcja pobierająca dane dostępności z zewnętrznego JSON
+    function fetchAvailability() {
+        // Dodaj timestamp do URL aby ominąć cache
+        const timestamp = new Date().getTime();
+        const urlWithTimestamp = AVAILABILITY_URL + '?v=' + timestamp;
+
+        debugLog('Rozpoczynam pobieranie danych dostępności...');
+        debugLog('URL z timestamp: ' + urlWithTimestamp);
+
+        return fetch(urlWithTimestamp)
+            .then(function(response) {
+                debugLog('Odpowiedź z serwera - status: ' + response.status);
+                if (!response.ok) {
+                    throw new Error('Błąd pobierania danych: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(function(data) {
+                debugLog('Pobrano dane z JSON:', data);
+
+                // Mapowanie danych z JSON na naszą strukturę
+                const availability = {
+                    hotel_room2: {
+                        total: data.hotel_room2 ? data.hotel_room2.total : DEFAULT_AVAILABILITY.hotel_room2.total,
+                        remaining: Math.max(0, data.hotel_room2 ? data.hotel_room2.remaining : DEFAULT_AVAILABILITY.hotel_room2.remaining)
+                    },
+                    hotel_room2_solo: {
+                        total: data.hotel_room2_solo ? data.hotel_room2_solo.total : DEFAULT_AVAILABILITY.hotel_room2_solo.total,
+                        remaining: Math.max(0, data.hotel_room2_solo ? data.hotel_room2_solo.remaining : DEFAULT_AVAILABILITY.hotel_room2_solo.remaining)
+                    },
+                    hotel_room4: {
+                        total: data.hotel_room4 ? data.hotel_room4.total : DEFAULT_AVAILABILITY.hotel_room4.total,
+                        remaining: Math.max(0, data.hotel_room4 ? data.hotel_room4.remaining : DEFAULT_AVAILABILITY.hotel_room4.remaining)
+                    },
+                    domek_room2: {
+                        total: data.domek_room2 ? data.domek_room2.total : DEFAULT_AVAILABILITY.domek_room2.total,
+                        remaining: Math.max(0, data.domek_room2 ? data.domek_room2.remaining : DEFAULT_AVAILABILITY.domek_room2.remaining)
+                    },
+                    domek_room4: {
+                        total: data.domek_room4 ? data.domek_room4.total : DEFAULT_AVAILABILITY.domek_room4.total,
+                        remaining: Math.max(0, data.domek_room4 ? data.domek_room4.remaining : DEFAULT_AVAILABILITY.domek_room4.remaining)
+                    },
+                    domek_room4_premium: {
+                        total: data.domek_room4_premium ? data.domek_room4_premium.total : DEFAULT_AVAILABILITY.domek_room4_premium.total,
+                        remaining: Math.max(0, data.domek_room4_premium ? data.domek_room4_premium.remaining : DEFAULT_AVAILABILITY.domek_room4_premium.remaining)
+                    }
+                };
+
+                debugLog('Zmapowana dostępność:', availability);
+                return availability;
+            })
+            .catch(function(error) {
+                debugLog('BŁĄD podczas pobierania danych! Używam wartości domyślnych.');
+                debugLog('Szczegóły błędu:', error);
+                return DEFAULT_AVAILABILITY;
+            });
+    }
+
+    async function initCampWidget() {
+        // Sprawdzamy czy widget już nie jest zainicjalizowany
+        if (window.campPricingWidgetInit) {
+            debugLog('Widget już zainicjalizowany - pomijam ponowną inicjalizację');
+            return;
+        }
+
+        debugLog('========================================');
+        debugLog('INICJALIZACJA WIDGETU CENNIKA');
+        debugLog('========================================');
+
+        window.campPricingWidgetInit = true;
+
+        // Pobieramy aktualne dane dostępności przed zdefiniowaniem cennika
+        debugLog('Rozpoczynam proces pobierania danych dostępności...');
+        const availability = await fetchAvailability();
+        debugLog('Dane dostępności gotowe do użycia:', availability);
+
+        // Baza danych cen
+        const pricesDB = {
+            solo: {
+                hotel: {
+                    room4: {
+                        title: "1 miejsce w pokoju 4&#8209;osobowym",
+                        desc: "Miejsce dla jednej osoby w pokoju 4&#8209;osobowym. Idealne by poznać nowych ludzi",
+                        once: 3270,
+                        installments: [3, 1140],
+                        regular: 3370,
+                        popular: true,
+                        cartLink: "https://kursy.badzblizej.pl/s/camp-1miejsce-pokoj4os-earlybirds.html",
+                        cartLinkInstallments: "https://kursy.badzblizej.pl/s/camp-1miejsce-pokoj4os-earlybirds-raty.html",
+                        display: true,
+                        isAvailable: true,
+                        total: availability.hotel_room4.total,
+                        remaining: availability.hotel_room4.remaining,
+                        alerts: [],
+                        labels: [],
+                        genderAvailability: 'male'
+                    },
+                    room2: {
+                        title: "1 miejsce w pokoju 2&#8209;osobowym",
+                        desc: "Miejsce dla jednej osoby w pokoju 2&#8209;osobowym.",
+                        once: 3470,
+                        installments: [3, 1207],
+                        regular: 3570,
+                        cartLink: "https://kursy.badzblizej.pl/s/camp-1miejsce-pokoj2os-earlybirds.html",
+                        cartLinkInstallments: "https://kursy.badzblizej.pl/s/camp-1miejsce-pokoj2os-earlybirds-raty.html",
+                        display: false,
+                        isAvailable: false,
+                        total: availability.hotel_room2_solo.total,
+                        remaining: availability.hotel_room2_solo.remaining,
+                        alerts: ["Zostało tylko 1 miejsce w pokoju żeńskim"],
+                        labels: [],
+                        genderAvailability: 'both'
+                    }
+                },
+                domek: {
+                    room4: {
+                        title: "1 miejsce w domku 4&#8209;osobowym",
+                        desc: "Domek oferuje salon z rozkładaną 2-osobową sofą oraz osobną sypialnię z łóżkiem pojedynczym i łóżkiem piętrowym.",
+                        once: 2970,
+                        installments: [3, 1040],
+                        regular: 3070,
+                        popular: true,
+                        cartLink: "https://kursy.badzblizej.pl/s/camp-1miejsce-domek4os-earlybirds.html",
+                        cartLinkInstallments: "https://kursy.badzblizej.pl/s/camp-1miejsce-domek4os-earlybirds-raty.html",
+                        display: true,
+                        isAvailable: true,
+                        total: availability.domek_room4.total,
+                        remaining: availability.domek_room4.remaining,
+                        labels: ["Blisko natury"],
+                        genderAvailability: 'male'
+                    },
+                    room2: {
+                        title: "1 miejsce w domku 2&#8209;osobowym",
+                        desc: "Miejsce dla jednej osoby w domku 2&#8209;osobowym.",
+                        once: 3270,
+                        installments: [3, 1140],
+                        regular: 3370,
+                        cartLink: "https://kursy.badzblizej.pl/s/camp-1miejsce-domek2os-earlybirds.html",
+                        cartLinkInstallments: "https://kursy.badzblizej.pl/s/camp-1miejsce-domek2os-earlybirds-raty.html",
+                        display: false,
+                        isAvailable: false,
+                        total: availability.domek_room2.total,
+                        remaining: availability.domek_room2.remaining,
+                        alerts: ["Zostało tylko 1 miejsce w domku żeńskim"],
+                        labels: [],
+                        genderAvailability: 'both'
+                    }
+                }
+            },
+            duo: {
+                hotel: {
+                    room4: {
+                        title: "2 miejsca w 4&#8209;osobowym pokoju hotelowym ",
+                        desc: "Miejsce dla dwóch osób w pokoju 4&#8209;osobowym. Idealne by poznać nowych ludzi",
+                        once: 5726,
+                        installments: [3, 1959],
+                        regular: 5826,
+                        popular: true,
+                        cartLink: "https://kursy.badzblizej.pl/s/camp-2miejsca-pokoj4os-earlybirds.html",
+                        cartLinkInstallments: "https://kursy.badzblizej.pl/s/camp-2miejsca-pokoj4os-earlybirds-raty.html",
+                        display: true,
+                        isAvailable: true,
+                        total: availability.hotel_room4.total,
+                        remaining: availability.hotel_room4.remaining,
+                        alerts: ["Polecana opcja dla przyjaciół"],
+                        labels: ["Podział na pokoje męskie i żeńskie"]
+                    },
+                    room2: {
+                        title: "2 miejsca w 2&#8209;osobowym pokoju hotelowym ",
+                        desc: "Komfortowy pokój 2&#8209;osobowy tylko dla Was",
+                        once: 6086,
+                        installments: [3, 2079],
+                        regular: 6186,
+                        cartLink: "https://kursy.badzblizej.pl/s/camp-2miejsca-pokoj2os-earlybirds.html",
+                        cartLinkInstallments: "https://kursy.badzblizej.pl/s/camp-2miejsca-pokoj2os-earlybirds-raty.html",
+                        display: true,
+                        isAvailable: true,
+                        total: availability.hotel_room2.total,
+                        remaining: availability.hotel_room2.remaining,
+                        alerts: ["Polecana opcja dla par"],
+                        labels: ["Pokój na wyłączność"]
+                    }
+                },
+                domek: {
+
+                    
+                    room4: {
+                        title: "2 miejsca w 4&#8209;osobowym domku (salon)",
+                        desc: "Miejsce dla dwóch osób w domku 4&#8209;osobowym (salon). <br> Domek oferuje salon z rozkładaną 2-osobową sofą oraz osobną sypialnię z łóżkiem pojedynczym i łóżkiem piętrowym.",
+                        once: 5186,
+                        installments: [3, 1779],
+                        regular: 5526,
+                        popular: true,
+                        cartLink: "https://kursy.badzblizej.pl/s/camp-2-miejsca-domek4os-earlybirds.html",
+                        cartLinkInstallments: "https://kursy.badzblizej.pl/s/camp-2miejsca-domek4os-earlybirds-raty.html",
+                        display: true,
+                        isAvailable: true,
+                        total: availability.domek_room4.total,
+                        remaining: availability.domek_room4.remaining,
+                        alerts: [],
+                        labels: ["Przechodnia sypialnia","Rozkładana 2-osobowa sofa","Standard niższy niż hotel"]
+                    },
+                    room4_premium: {
+                        title: "2 miejsca w oddzielnej sypialni - w 4&#8209;osobowym domku",
+                        desc: "Miejsce dla dwóch osób w domku 4&#8209;osobowym. Oddzielna zamykana sypialnia, ale pojedyncze łóżka (niełączone). ",
+                        once: 5950,
+                        installments: [3, 2033],
+                        regular: 6150,
+                        cartLink: "https://badzblizej.elms.pl/s/camp-2-miejsca-domek4os-premium-earlybirds54.html",
+                        cartLinkInstallments: "https://badzblizej.elms.pl/s/camp-2miejsca-domek2os-premium-earlybirds-raty55.html",
+                        display: true,
+                        isAvailable: false,
+                        total: availability.domek_room4_premium.total,
+                        remaining: availability.domek_room4_premium.remaining,
+                        labels: ["Oddzielna sypialnia","Standard niższy niż hotel" ]
+                    },
+                    room2: {
+                        title: "2 miejsca - domek 2&#8209;osobowy",
+                        desc: "Niezależny domek w otoczeniu lasu tylko dla Was",
+                        once: 5726,
+                        installments: [3, 1959],
+                        regular: 6066,
+                        cartLink: "https://kursy.badzblizej.pl/s/camp-2-miejsca-domek2os-earlybirds.html",
+                        cartLinkInstallments: "https://kursy.badzblizej.pl/s/camp-2miejsca-domek2os-earlybirds-raty.html",
+                        display: false,
+                        isAvailable: false,
+                        total: availability.domek_room2.total,
+                        remaining: availability.domek_room2.remaining,
+                        labels: ["Osobny domek"]
+                    }
+                }
+            }
+        };
+
+        debugLog('Baza danych cen (pricesDB) zdefiniowana');
+
+        // Stan aplikacji
+        const widgetState = {
+            attendance: null,
+            accommodation: null
+        };
+
+        debugLog('Stan aplikacji (widgetState) zainicjalizowany:', widgetState);
+
+        // Elementy DOM
+        debugLog('Szukam elementów DOM...');
+        const widget = document.getElementById('camp-pricing-widget-2024');
+        if (!widget) {
+            debugLog('BŁĄD: Nie znaleziono głównego elementu widgetu (#camp-pricing-widget-2024)');
+            return;
+        }
+        debugLog('✓ Znaleziono główny element widgetu');
+
+        const stepAttendance = widget.querySelector('#cpw-step-attendance');
+        debugLog('✓ stepAttendance:', stepAttendance ? 'znaleziono' : 'BRAK');
+
+        const stepAccommodation = widget.querySelector('#cpw-step-accommodation');
+        debugLog('✓ stepAccommodation:', stepAccommodation ? 'znaleziono' : 'BRAK');
+
+        const resultsContainer = widget.querySelector('#cpw-results');
+        debugLog('✓ resultsContainer:', resultsContainer ? 'znaleziono' : 'BRAK');
+
+        const stepAccommodationTitle = stepAccommodation ? stepAccommodation.querySelector('.cpw-step-title') : null;
+        const stepAccommodationDesc = stepAccommodation ? stepAccommodation.querySelector('.cpw-step-desc') : null;
+        const originalStepAccommodationTitle = stepAccommodationTitle ? stepAccommodationTitle.textContent : '';
+        const originalStepAccommodationDesc = stepAccommodationDesc ? stepAccommodationDesc.textContent : '';
+
+        debugLog('Wszystkie elementy DOM gotowe');
+
+        let cardHeightResizeTimeoutId = null;
+        let cardHeightResizeListenerAttached = false;
+
+        // --- Modal potwierdzenia płci ---
+        let pendingGenderUrl = null;
+
+        function showGenderModal(gender, url) {
+            pendingGenderUrl = url;
+            const modal = document.getElementById('cpw-gender-modal');
+            const iconEl = document.getElementById('cpw-modal-icon');
+            const titleEl = document.getElementById('cpw-modal-title');
+            const messageEl = document.getElementById('cpw-modal-message');
+            if (!modal) return;
+
+            const accommodationType = widgetState.accommodation === 'hotel' ? 'pokoju' : 'domku';
+            if (gender === 'male') {
+                if (iconEl) iconEl.textContent = '🚹';
+                if (titleEl) titleEl.textContent = 'Ten wariant jest tylko dla mężczyzn';
+                if (messageEl) messageEl.innerHTML =
+                    'Wybrany wariant to miejsce w <span class="cpw-modal-highlight">' + accommodationType + ' wyłącznie dla mężczyzn</span>.' +
+                    '<br><br>Czy potwierdzasz, że jesteś mężczyzną?';
+            } else {
+                if (iconEl) iconEl.textContent = '🚺';
+                if (titleEl) titleEl.textContent = 'Ten wariant jest tylko dla kobiet';
+                if (messageEl) messageEl.innerHTML =
+                    'Wybrany wariant to miejsce w <span class="cpw-modal-highlight">' + accommodationType + ' wyłącznie dla kobiet</span>.' +
+                    '<br><br>Czy potwierdzasz, że jesteś kobietą?';
+            }
+
+            modal.classList.remove('cpw-modal-hidden');
+        }
+
+        function closeGenderModal() {
+            const modal = document.getElementById('cpw-gender-modal');
+            if (modal) modal.classList.add('cpw-modal-hidden');
+            pendingGenderUrl = null;
+        }
+
+        function initGenderModal() {
+            const modal = document.getElementById('cpw-gender-modal');
+            const cancelBtn = document.getElementById('cpw-modal-cancel');
+            const confirmBtn = document.getElementById('cpw-modal-confirm');
+
+            if (cancelBtn) cancelBtn.addEventListener('click', closeGenderModal);
+
+            if (confirmBtn) confirmBtn.addEventListener('click', function() {
+                const url = pendingGenderUrl;
+                closeGenderModal();
+                if (url) window.location.href = url;
+            });
+
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) closeGenderModal();
+                });
+            }
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal && !modal.classList.contains('cpw-modal-hidden')) {
+                    closeGenderModal();
+                }
+            });
+        }
+
+        function syncCardTopHeights() {
+            const cards = resultsContainer ? Array.from(resultsContainer.querySelectorAll('.cpw-price-card')) : [];
+            cards.forEach(card => {
+                const topSection = card.querySelector('.cpw-card-top');
+                if (topSection) {
+                    topSection.style.minHeight = '';
+                }
+            });
+
+            if (!cards.length || window.innerWidth < 768) {
+                return;
+            }
+
+            for (let i = 0; i < cards.length; i += 2) {
+                const rowCards = cards.slice(i, i + 2);
+                let maxTopHeight = 0;
+
+                rowCards.forEach(card => {
+                    const topSection = card.querySelector('.cpw-card-top');
+                    if (topSection) {
+                        maxTopHeight = Math.max(maxTopHeight, topSection.offsetHeight);
+                    }
+                });
+
+                rowCards.forEach(card => {
+                    const topSection = card.querySelector('.cpw-card-top');
+                    if (topSection) {
+                        topSection.style.minHeight = maxTopHeight + 'px';
+                    }
+                });
+            }
+        }
+
+        function syncAvailabilityHeights() {
+            const cards = resultsContainer ? Array.from(resultsContainer.querySelectorAll('.cpw-price-card')) : [];
+
+            cards.forEach(card => {
+                const wrapper = card.querySelector('.cpw-availability-wrapper');
+                if (wrapper) {
+                    wrapper.style.marginTop = '';
+                    wrapper.style.minHeight = '';
+                    if (wrapper.innerHTML.trim().length === 0) {
+                        wrapper.classList.add('cpw-availability-wrapper--empty');
+                    } else {
+                        wrapper.classList.remove('cpw-availability-wrapper--empty');
+                    }
+                }
+            });
+
+            if (!cards.length || window.innerWidth < 768) {
+                return;
+            }
+
+            for (let i = 0; i < cards.length; i += 2) {
+                const rowCards = cards.slice(i, i + 2);
+                const rowWrappers = rowCards.map(card => card.querySelector('.cpw-availability-wrapper'));
+                const hasContent = rowWrappers.some(wrapper => wrapper && wrapper.innerHTML.trim().length > 0);
+
+                if (!hasContent) {
+                    rowWrappers.forEach(wrapper => {
+                        if (!wrapper) return;
+                        wrapper.style.minHeight = '0';
+                        wrapper.style.marginTop = '0';
+                        wrapper.classList.add('cpw-availability-wrapper--empty');
+                    });
+                    continue;
+                }
+
+                let maxHeight = 0;
+                rowWrappers.forEach(wrapper => {
+                    if (!wrapper) return;
+                    const previousMinHeight = wrapper.style.minHeight;
+                    wrapper.style.minHeight = '';
+                    const height = wrapper.offsetHeight;
+                    maxHeight = Math.max(maxHeight, height);
+                    wrapper.style.minHeight = previousMinHeight;
+                });
+
+                rowWrappers.forEach(wrapper => {
+                    if (!wrapper) return;
+                    wrapper.classList.remove('cpw-availability-wrapper--empty');
+                    wrapper.style.marginTop = '12px';
+                    wrapper.style.minHeight = maxHeight + 'px';
+                });
+            }
+        }
+
+        function syncLayoutHeights() {
+            syncCardTopHeights();
+            syncAvailabilityHeights();
+        }
+        
+        // Funkcja renderowania kart cenowych
+        function renderCards() {
+            debugLog('>>> renderCards() wywołana');
+
+            if (!resultsContainer) {
+                debugLog('BŁĄD: resultsContainer nie istnieje');
+                return;
+            }
+            if (!widgetState.attendance || !widgetState.accommodation) {
+                debugLog('Brak pełnego wyboru użytkownika - attendance: ' + widgetState.attendance + ', accommodation: ' + widgetState.accommodation);
+                return;
+            }
+
+            debugLog('Renderuję karty dla:', {
+                attendance: widgetState.attendance,
+                accommodation: widgetState.accommodation
+            });
+
+            resultsContainer.innerHTML = '';
+
+            let optionsToRender = {};
+            let headerHTML = '<div class="cpw-results">';
+
+            if (widgetState.attendance === 'duo') {
+                optionsToRender = pricesDB.duo[widgetState.accommodation] || {};
+                debugLog('Wybrano opcje DUO dla: ' + widgetState.accommodation);
+            } else if (widgetState.attendance === 'solo') {
+                optionsToRender = pricesDB.solo[widgetState.accommodation] || {};
+                debugLog('Wybrano opcje SOLO dla: ' + widgetState.accommodation);
+            } else {
+                debugLog('BŁĄD: Nieznana wartość attendance: ' + widgetState.attendance);
+                return;
+            }
+
+            debugLog('Opcje do renderowania:', optionsToRender);
+            
+            const priceDeadlineLabel = getPriceDeadlineLabel();
+            const nextAvailabilityLabel = getNextAvailabilityLabel();
+
+            const totalOptions = Object.keys(optionsToRender).length;
+            let renderedCount = 0;
+            let skippedCount = 0;
+            let cardsMarkup = '';
+
+            Object.keys(optionsToRender).forEach(function(key) {
+                const opt = optionsToRender[key];
+
+                debugLog('Przetwarzam kartę: ' + key, {
+                    display: opt.display,
+                    isAvailable: opt.isAvailable,
+                    total: opt.total,
+                    remaining: opt.remaining,
+                    once: opt.once,
+                    popular: opt.popular
+                });
+
+                // Sprawdź czy karta powinna być wyświetlana
+                if (opt.display === false) {
+                    debugLog('  ✖ Karta ' + key + ' POMINIĘTA (display: false)');
+                    skippedCount++;
+                    return; // Pomijamy tę kartę - nie renderujemy jej w ogóle
+                }
+
+                debugLog('  ✓ Karta ' + key + ' zostanie wyrenderowana');
+                renderedCount++;
+
+                const saved = opt.regular - opt.once;
+                // Nowa logika: karta jest niedostępna jeśli isAvailable=false LUB remaining=0
+                const isSoldOut = !opt.isAvailable || opt.remaining === 0;
+                debugLog('  → isSoldOut: ' + isSoldOut + ' (isAvailable: ' + opt.isAvailable + ', remaining: ' + opt.remaining + ')');
+
+                const cardClasses = ['cpw-price-card'];
+                if (opt.popular && !isSoldOut) {
+                    cardClasses.push('cpw-popular');
+                }
+                if (isSoldOut) {
+                    cardClasses.push('cpw-sold-out');
+                }
+                const soldOutBadgeText = SOLDOUT_MODE === 'total' ? 'Wyprzedane' : 'Wyprzedane w tej Puli';
+                const priceInfoText = isSoldOut
+                    ? (SOLDOUT_MODE === 'total' ? 'Brak dostępnych miejsc' : nextAvailabilityLabel)
+                    : priceDeadlineLabel;
+                const priceSavedText = isSoldOut ? '' : `Oszczędzasz ${saved} zł!`;
+                const soldOutBadge = isSoldOut ? `<div class="cpw-sold-out-badge">${soldOutBadgeText}</div>` : '';
+                const popularBadge = opt.popular && !isSoldOut ? '<div class="cpw-popular-badge">NAJPOPULARNIEJSZY</div>' : '';
+
+                // Automatyczny label dostępności płci (tylko karty solo)
+                let genderAlertHTML = '';
+                let genderSoldOutHTML = '';
+                if (!isSoldOut && opt.genderAvailability && opt.genderAvailability !== 'both') {
+                    const accommodationType = widgetState.accommodation === 'hotel' ? 'pokoju' : 'domku';
+                    const genderText = opt.genderAvailability === 'male'
+                        ? 'Miejsca dostępne wyłącznie w ' + accommodationType + ' męskim'
+                        : 'Miejsca dostępne wyłącznie w ' + accommodationType + ' żeńskim';
+                    genderAlertHTML = '<div class="cpw-card-alert cpw-gender-exclusive">' + genderText + '</div>';
+                    const soldOutGenderText = opt.genderAvailability === 'male'
+                        ? 'Wyprzedane dla kobiet'
+                        : 'Wyprzedane dla mężczyzn';
+                    genderSoldOutHTML = '<div class="cpw-card-alert cpw-soldout-other-gender">' + soldOutGenderText + '</div>';
+                }
+
+                let genderLabelHTML = '';
+                if (opt.genderAvailability === 'both') {
+                    const accommodationType = widgetState.accommodation === 'hotel' ? 'pokoje' : 'domki';
+                    genderLabelHTML = '<span class="cpw-card-label">Podział na ' + accommodationType + ' męskie i żeńskie</span>';
+                }
+
+                // Generuj HTML dla labeli alertów
+                let alertLabelsHTML = '';
+                if ((opt.alerts && opt.alerts.length > 0) || genderAlertHTML) {
+                    debugLog('  → Generuję alertów dla karty: ' + key, opt.alerts);
+                    alertLabelsHTML = '<div class="cpw-card-alerts">';
+                    alertLabelsHTML += genderAlertHTML;
+                    if (opt.alerts) {
+                        opt.alerts.forEach(function(alertLabel) {
+                            alertLabelsHTML += '<div class="cpw-card-alert">' + alertLabel + '</div>';
+                        });
+                    }
+                    alertLabelsHTML += '</div>';
+                }
+
+                // Generuj HTML dla labeli
+                let labelsHTML = '';
+                if ((opt.labels && opt.labels.length > 0) || genderLabelHTML || genderSoldOutHTML) {
+                    debugLog('  → Generuję labeli dla karty: ' + key, opt.labels);
+                    labelsHTML = '<div class="cpw-card-labels">';
+                    labelsHTML += genderLabelHTML;
+                    labelsHTML += genderSoldOutHTML;
+                    if (opt.labels) {
+                        opt.labels.forEach(function(label) {
+                            labelsHTML += '<span class="cpw-card-label">' + label + '</span>';
+                        });
+                    }
+                    labelsHTML += '</div>';
+                }
+
+                const badgesContent = (alertLabelsHTML + labelsHTML).trim();
+                const badgesHTML = badgesContent.length > 0
+                    ? `<div class="cpw-card-badges">${alertLabelsHTML}${labelsHTML}</div>`
+                    : '';
+
+                // Generuj HTML dla komponentu ostatnich miejsc
+                let availabilityAlertHTML = '';
+                if (!isSoldOut && opt.total && opt.remaining !== undefined) {
+                    const percentRemaining = (opt.remaining / opt.total) * 100;
+                    const shouldShowAlert = opt.remaining < 10 && percentRemaining < 33;
+
+                    if (shouldShowAlert) {
+                        debugLog('  → Wyświetlam alert o ostatnich miejscach dla ' + key + ': remaining=' + opt.remaining + ', total=' + opt.total + ', percent=' + percentRemaining.toFixed(1) + '%');
+                        availabilityAlertHTML = `
+                            <div class="cpw-availability-alert">
+                                <div class="cpw-availability-text">Zostało tylko <strong>${opt.remaining}</strong> dostępnych miejsc</div>
+                                <div class="cpw-availability-progress">
+                                    <div class="cpw-availability-progress-fill" style="width: ${percentRemaining}%"></div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                }
+
+                const hasAvailabilityAlert = availabilityAlertHTML.trim().length > 0;
+                const inlineCountdownText = isSoldOut ? getInlineCountdownLabel() : '';
+                const ctaMarkup = isSoldOut
+                    ? (SOLDOUT_MODE === 'total'
+                        ? `<span class="cpw-cta-btn cpw-disabled" role="button" aria-disabled="true">Wyprzedane</span>`
+                        : `<span class="cpw-cta-btn cpw-disabled" role="button" aria-disabled="true">Nowa pula miejsc za <span class="cpw-inline-countdown">${inlineCountdownText}</span></span>`)
+                    : `<a href="${opt.cartLink}" class="cpw-cta-btn" data-cpw-once-link="${opt.cartLink}" data-cpw-installments-link="${opt.cartLinkInstallments || opt.cartLink}">Rezerwuję Miejsce <span class="cpw-cta-icon" aria-hidden="true">&rarr;</span></a>`;
+                const paymentSection = isSoldOut ? '' : `
+                        <div class="cpw-payment-selector">
+                            <p class="cpw-payment-label">Wybierz formę płatności:</p>
+                            <div class="cpw-payment-toggle">
+                                <button class="cpw-payment-btn cpw-selected" data-cpw-payment="once">Jednorazowo</button>
+                                <button class="cpw-payment-btn" data-cpw-payment="installments">W ratach</button>
+                            </div>
+                               <p class="cpw-payment-note">Płatność jednorazowa jest o <strong>150 zł</strong> tańsza niż płatność&nbsp;ratalna</p>
+                        </div>`;
+                
+                const availabilityWrapperClasses = ['cpw-availability-wrapper'];
+                if (!hasAvailabilityAlert) {
+                    availabilityWrapperClasses.push('cpw-availability-wrapper--empty');
+                }
+
+                const availabilityWrapperMarkup = `<div class="${availabilityWrapperClasses.join(' ')}">${availabilityAlertHTML}</div>`;
+
+                cardsMarkup += `
+                    <div class="${cardClasses.join(' ')}" data-cpw-card="${key}" data-cpw-gender="${opt.genderAvailability || 'both'}">
+                        ${soldOutBadge}
+                        ${popularBadge}
+
+                        <div class="cpw-card-top">
+                            ${badgesHTML}
+                            <h3 class="cpw-card-title">${opt.title}</h3>
+                            <p class="cpw-card-desc">${opt.desc}</p>
+                            ${paymentSection}
+                        </div>
+
+                        <div class="cpw-card-bottom">
+                            <div class="cpw-price-display">
+                                <div class="cpw-price-original">
+                                    <span class="cpw-price-strike">${opt.regular} zł</span>
+                                </div>
+                                <div class="cpw-price-amount">${opt.once} zł</div>
+                                <div class="cpw-price-info">${priceInfoText}</div>
+                                <div class="cpw-price-saved">${priceSavedText}</div>
+                            </div>
+
+                            ${ctaMarkup}
+
+                            ${availabilityWrapperMarkup}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            const cardsHTML = `${headerHTML}<div class="cpw-price-cards">${cardsMarkup}</div></div>`;
+            resultsContainer.innerHTML = cardsHTML;
+
+            syncLayoutHeights();
+
+            if (!cardHeightResizeListenerAttached) {
+                cardHeightResizeListenerAttached = true;
+                window.addEventListener('resize', () => {
+                    clearTimeout(cardHeightResizeTimeoutId);
+                    cardHeightResizeTimeoutId = setTimeout(syncLayoutHeights, 150);
+                });
+            }
+
+            debugLog('========================================');
+            debugLog('PODSUMOWANIE RENDEROWANIA KART:');
+            debugLog('  Całkowita liczba opcji: ' + totalOptions);
+            debugLog('  Wyrenderowanych kart: ' + renderedCount);
+            debugLog('  Pominiętych kart (display=false): ' + skippedCount);
+            debugLog('========================================');
+
+            // Dodaj obsługę przycisków płatności
+            attachPaymentHandlers();
+
+            debugLog('<<< renderCards() zakończona');
+        }
+
+        // Obsługa przycisków płatności
+        function attachPaymentHandlers() {
+            debugLog('>>> attachPaymentHandlers() wywołana');
+
+            const cards = widget.querySelectorAll('.cpw-price-card');
+            debugLog('Znaleziono ' + cards.length + ' kart cenowych do obsługi');
+            
+            const formatInstallmentTotal = (count, amount) => {
+                const parseValue = (value) => {
+                    if (value === undefined || value === null) return NaN;
+                    return Number(String(value).replace(/\s/g, '').replace(',', '.'));
+                };
+                const countNum = parseValue(count);
+                const amountNum = parseValue(amount);
+                if (Number.isFinite(countNum) && Number.isFinite(amountNum)) {
+                    return (countNum * amountNum).toLocaleString('pl-PL');
+                }
+                return null;
+            };
+            
+            cards.forEach(function(card) {
+                const buttons = card.querySelectorAll('.cpw-payment-btn');
+                const priceAmount = card.querySelector('.cpw-price-amount');
+                const priceSaved = card.querySelector('.cpw-price-saved');
+                const priceOriginal = card.querySelector('.cpw-price-original');
+                const priceInfo = card.querySelector('.cpw-price-info');
+                const cardKey = card.getAttribute('data-cpw-card');
+                const ctaButton = card.querySelector('.cpw-cta-btn');
+                
+                // Znajdź dane opcji
+                let optionData = null;
+                if (widgetState.attendance === 'duo' && widgetState.accommodation) {
+                    const duoOptions = pricesDB.duo[widgetState.accommodation] || {};
+                    optionData = duoOptions[cardKey];
+                } else if (widgetState.attendance === 'solo' && widgetState.accommodation) {
+                    const soloOptions = pricesDB.solo[widgetState.accommodation] || {};
+                    optionData = soloOptions[cardKey];
+                }
+                
+                if (!optionData) return;
+
+                // Sprawdź dostępność: musi być isAvailable=true ORAZ remaining > 0
+                const isAvailable = optionData.isAvailable && optionData.remaining > 0;
+                debugLog('attachPaymentHandlers dla karty ' + cardKey + ': isAvailable=' + isAvailable + ' (optionData.isAvailable=' + optionData.isAvailable + ', remaining=' + optionData.remaining + ')');
+
+                if (ctaButton && isAvailable && ctaButton.tagName === 'A') {
+                    ctaButton.href = optionData.cartLink;
+                    ctaButton.dataset.cpwOnceLink = optionData.cartLink;
+                    ctaButton.dataset.cpwInstallmentsLink = optionData.cartLinkInstallments || optionData.cartLink;
+                } else if (ctaButton && !isAvailable) {
+                    ctaButton.setAttribute('aria-disabled', 'true');
+                }
+
+                // Intercept CTA dla kart z ograniczeniem płci
+                const cardGender = card.getAttribute('data-cpw-gender');
+                if (ctaButton && isAvailable && ctaButton.tagName === 'A' && (cardGender === 'male' || cardGender === 'female')) {
+                    ctaButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        showGenderModal(cardGender, this.href);
+                    });
+                }
+
+                const savedMessage = 'Oszczędzasz ' + (optionData.regular - optionData.once) + ' zł!';
+                
+                if (!isAvailable) {
+                    if (priceInfo) {
+                        priceInfo.textContent = SOLDOUT_MODE === 'total' ? 'Brak dostępnych miejsc' : getNextAvailabilityLabel();
+                    }
+                    if (priceSaved) {
+                        priceSaved.textContent = '';
+                        priceSaved.classList.remove('cpw-installments-selected');
+                    }
+                    if (priceOriginal) {
+                        priceOriginal.classList.remove('cpw-hidden');
+                    }
+                    return;
+                }
+                
+                buttons.forEach(function(btn) {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+
+                        debugLog('--- Użytkownik zmienia formę płatności na: ' + btn.dataset.cpwPayment);
+
+                        // Usuń selected ze wszystkich
+                        buttons.forEach(function(b) {
+                            b.classList.remove('cpw-selected');
+                        });
+
+                        // Dodaj selected do klikniętego
+                        btn.classList.add('cpw-selected');
+
+                        // Aktualizuj cenę
+                        if (btn.dataset.cpwPayment === 'once') {
+                            debugLog('Wyświetlam cenę jednorazową: ' + optionData.once + ' zł');
+                            priceAmount.innerHTML = optionData.once + ' zł';
+                            if (ctaButton) {
+                                ctaButton.href = optionData.cartLink;
+                            }
+                            if (priceSaved) {
+                                priceSaved.textContent = savedMessage;
+                                priceSaved.classList.remove('cpw-installments-selected');
+                            }
+                            if (priceOriginal) {
+                                priceOriginal.classList.remove('cpw-hidden');
+                            }
+                            if (priceInfo) {
+                                priceInfo.textContent = getPriceDeadlineLabel();
+                            }
+                        } else {
+                            const installmentCount = optionData.installments[0];
+                            const installmentAmount = optionData.installments[1];
+                            debugLog('Wyświetlam cenę w ratach: ' + installmentCount + 'x ' + installmentAmount + ' zł');
+                            priceAmount.innerHTML = '<span class="cpw-installment-prefix">' + installmentCount + 'x</span> ' + installmentAmount + ' zł';
+                            if (ctaButton) {
+                                ctaButton.href = optionData.cartLinkInstallments || optionData.cartLink;
+                            }
+                            if (priceSaved) {
+                                priceSaved.textContent = 'Raty płatne co miesiąc';
+                                priceSaved.classList.add('cpw-installments-selected');
+                            }
+                            if (priceOriginal) {
+                                priceOriginal.classList.add('cpw-hidden');
+                            }
+                            if (priceInfo) {
+                                const totalText = formatInstallmentTotal(installmentCount, installmentAmount);
+                                priceInfo.textContent = totalText ? 'W sumie ' + totalText + ' zł' : '';
+                            }
+                        }
+
+                        syncLayoutHeights();
+                    });
+                });
+            });
+        }
+        
+        // Event listener dla kroku 1
+        if (stepAttendance) {
+            debugLog('Dodaję event listener dla kroku 1 (attendance)');
+
+            stepAttendance.addEventListener('click', function(e) {
+                const btn = e.target.closest('.cpw-choice-btn');
+                if (!btn) return;
+
+                debugLog('--- KROK 1: Użytkownik kliknął przycisk attendance');
+
+                // Usuń selected ze wszystkich
+                stepAttendance.querySelectorAll('.cpw-choice-btn').forEach(function(b) {
+                    b.classList.remove('cpw-selected');
+                });
+
+                // Dodaj selected do klikniętego
+                btn.classList.add('cpw-selected');
+
+                // Zapisz wybór
+                widgetState.attendance = btn.dataset.cpwValue;
+                widgetState.accommodation = null;
+
+                debugLog('Wybrano attendance: ' + widgetState.attendance);
+                debugLog('Stan widgetu po wyborze:', widgetState);
+                resultsContainer.innerHTML = '';
+                
+                if (stepAccommodation) {
+                    stepAccommodation.classList.remove('cpw-hidden');
+                    
+                    // Reset wyboru w kroku 2
+                    stepAccommodation.querySelectorAll('.cpw-choice-btn').forEach(function(b) {
+                        b.classList.remove('cpw-selected');
+                    });
+                    
+                    // Dopasuj nagłówki kroku 2 do liczby osób
+                    if (widgetState.attendance === 'duo') {
+                        if (stepAccommodationTitle) {
+                            stepAccommodationTitle.textContent = 'Krok 2: Jaki standard preferujecie?';
+                        }
+                        if (stepAccommodationDesc) {
+                            stepAccommodationDesc.textContent = 'Wybierzcie, czy stawiacie na komfort hotelu, czy domek w naturze.';
+                        }
+                    } else {
+                        if (stepAccommodationTitle) {
+                            stepAccommodationTitle.textContent = originalStepAccommodationTitle;
+                        }
+                        if (stepAccommodationDesc) {
+                            stepAccommodationDesc.textContent = originalStepAccommodationDesc;
+                        }
+                    }
+                    
+                    // Scroll do kroku 2
+                    setTimeout(function() {
+                        stepAccommodation.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 100);
+                }
+                
+            });
+        }
+        
+        // Event listener dla kroku 2
+        if (stepAccommodation) {
+            debugLog('Dodaję event listener dla kroku 2 (accommodation)');
+
+            stepAccommodation.addEventListener('click', function(e) {
+                const btn = e.target.closest('.cpw-choice-btn');
+                if (!btn) return;
+
+                debugLog('--- KROK 2: Użytkownik kliknął przycisk accommodation');
+
+                // Usuń selected ze wszystkich
+                stepAccommodation.querySelectorAll('.cpw-choice-btn').forEach(function(b) {
+                    b.classList.remove('cpw-selected');
+                });
+
+                // Dodaj selected do klikniętego
+                btn.classList.add('cpw-selected');
+
+                // Zapisz wybór
+                widgetState.accommodation = btn.dataset.cpwValue;
+
+                debugLog('Wybrano accommodation: ' + widgetState.accommodation);
+                debugLog('Stan widgetu po wyborze:', widgetState);
+
+                // Renderuj karty
+                debugLog('Wywołuję renderCards()...');
+                renderCards();
+
+                // Scroll do wyników
+                setTimeout(function() {
+                    resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            });
+        }
+
+        initGenderModal();
+
+        debugLog('========================================');
+        debugLog('INICJALIZACJA WIDGETU ZAKOŃCZONA');
+        debugLog('========================================');
+    }
+// Inicjalizacja licznika czasu
+function initCountdown() {
+    const targetDate = getCountdownTargetDate();
+    const deadlineEl = document.getElementById('cpw-deadline');
+    if (deadlineEl) {
+        const day = targetDate.getDate();
+        const monthName = COUNTDOWN_MONTH_NAMES[targetDate.getMonth()];
+        const year = targetDate.getFullYear();
+        const hours = String(targetDate.getHours()).padStart(2, '0');
+        const minutes = String(targetDate.getMinutes()).padStart(2, '0');
+        deadlineEl.textContent = `${day} ${monthName} ${year} roku, do godz. ${hours}:${minutes}`;
+    }
+    
+    function updateCountdown() {
+        const now = new Date();
+        const difference = targetDate - now;
+        
+        if (difference > 0) {
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            
+            // Aktualizuj wartości z leading zero
+            const daysEl = document.getElementById('cpw-days');
+            const hoursEl = document.getElementById('cpw-hours');
+            const minutesEl = document.getElementById('cpw-minutes');
+            const secondsEl = document.getElementById('cpw-seconds');
+            
+            if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+            if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+            if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+            if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+
+            const inlineLabel = formatInlineCountdownLabel(days, hours, minutes, seconds);
+            document.querySelectorAll('.cpw-inline-countdown').forEach(function(el) {
+                el.textContent = inlineLabel;
+            });
+        } else {
+            // Czas minął - możesz tu dodać komunikat lub ukryć licznik
+            const countdownContainer = document.querySelector('.cpw-countdown-container');
+            if (countdownContainer) {
+                countdownContainer.innerHTML = '<div style="padding: 20px; font-size: 18px; font-weight: 700; color: #370F11;">Promocja zakończona</div>';
+            }
+            const inlineLabel = formatInlineCountdownLabel(0, 0, 0, 0);
+            document.querySelectorAll('.cpw-inline-countdown').forEach(function(el) {
+                el.textContent = inlineLabel;
+            });
+        }
+    }
+    
+    // Pierwsza aktualizacja
+    updateCountdown();
+    
+    // Aktualizuj co sekundę
+    setInterval(updateCountdown, 1000);
+}
+
+// Wywołaj licznik
+initCountdown();
+})();
+</script>
+</div>
+<!-- KONIEC WIDGETU -->
+
+<!-- ZARZĄDZANIE WYSOKOŚCIĄ -->
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('[DEBUG] Skrypt korygujący wysokość został uruchomiony.');
+
+    // --- KROK 1: Zdefiniowanie kluczowych elementów ---
+    const sectionEl = document.querySelector('.section-pricing-html');
+    const widgetContainerEl = document.querySelector('.custom-html-value');
+    
+    // Sprawdzamy, czy znaleziono podstawowe elementy
+    if (!sectionEl || !widgetContainerEl) {
+        console.error('[DEBUG] BŁĄD: Nie znaleziono głównej sekcji (.section-pricing-html) lub kontenera widżetu (.custom-html-value). Skrypt nie może kontynuować.');
+        return;
+    }
+    console.log('[DEBUG] Znaleziono sekcję główną:', sectionEl);
+    console.log('[DEBUG] Znaleziono kontener widżetu:', widgetContainerEl);
+
+    const RETRY_DELAY = 200;
+    let widgetEl = null;
+    let retryTimeoutId = null;
+    let resizeTimeoutId = null;
+
+    const findWidget = () => {
+        if (widgetEl && document.contains(widgetEl)) {
+            return widgetEl;
+        }
+        if (widgetContainerEl) {
+            const nestedWidget = widgetContainerEl.querySelector('#camp-pricing-widget-2024');
+            if (nestedWidget) {
+                widgetEl = nestedWidget;
+                return widgetEl;
+            }
+        }
+        const globalWidget = document.getElementById('camp-pricing-widget-2024');
+        if (globalWidget) {
+            widgetEl = globalWidget;
+            return widgetEl;
+        }
+        return null;
+    };
+
+    const scheduleRetry = () => {
+        if (retryTimeoutId) return;
+        retryTimeoutId = setTimeout(() => {
+            retryTimeoutId = null;
+            fixSectionHeight();
+        }, RETRY_DELAY);
+    };
+
+    // --- KROK 2: Główna funkcja do mierzenia i ustawiania wysokości ---
+    const fixSectionHeight = () => {
+        console.log('%c[DEBUG] Uruchamiam funkcję fixSectionHeight...', 'color: blue;');
+
+        const widget = findWidget();
+
+        if (!widget) {
+            console.warn('[DEBUG] OSTRZEŻENIE: Element widżetu (#camp-pricing-widget-2024) nie jest jeszcze obecny w DOM. Czekam na jego pojawienie się.');
+            scheduleRetry();
+            return;
+        }
+
+        const widgetHeight = widget.offsetHeight;
+        console.log(`[DEBUG] Zmierzona wysokość widżetu (#camp-pricing-widget-2024) to: ${widgetHeight}px`);
+
+        if (widgetHeight > 0) {
+            const newMinHeight = widgetHeight + 50;
+            sectionEl.style.minHeight = `${newMinHeight}px`;
+            console.log(`%c[DEBUG] SUKCES: Ustawiono min-height dla sekcji .section-pricing-html na: ${newMinHeight}px`, 'color: green; font-weight: bold;');
+        } else {
+            console.log('[DEBUG] Wysokość widżetu to 0, nie wprowadzam zmian.');
+        }
+    };
+
+    // --- KROK 3: Uruchamianie funkcji w odpowiednich momentach (aby niczego nie przegapić) ---
+
+    // 1. Uruchom od razu po załadowaniu strony
+    fixSectionHeight();
+
+    // 2. Użyj MutationObserver, aby wykryć, KIEDY widżet jest dodawany do strony
+    const mutationObserver = new MutationObserver((mutations) => {
+        console.log('[DEBUG] MutationObserver wykrył zmianę w DOM (prawdopodobnie dodano widżet).');
+        // Po wykryciu zmiany, dajemy przeglądarce chwilę na renderowanie i odpalamy naszą funkcję
+        setTimeout(fixSectionHeight, 100); 
+    });
+
+    // Obserwujemy kontener, do którego wstrzykiwany jest widżet
+    mutationObserver.observe(widgetContainerEl, {
+        childList: true, // Obserwuj dodawanie/usuwanie dzieci (najważniejsze!)
+        subtree: true    // Obserwuj również zmiany w zagnieżdżonych elementach
+    });
+    console.log('[DEBUG] MutationObserver nasłuchuje na zmiany w kontenerze widżetu.');
+
+    // 3. Użyj ResizeObserver jako dodatkowe zabezpieczenie, gdyby widżet zmienił rozmiar już po załadowaniu
+    const resizeObserver = new ResizeObserver(() => {
+        console.log('[DEBUG] ResizeObserver wykrył zmianę rozmiaru wewnątrz widżetu.');
+        fixSectionHeight();
+    });
+
+    // Zacznij obserwować dopiero wtedy, gdy widżet faktycznie się pojawi
+    const startResizeObserver = () => {
+        const widget = findWidget();
+        if (widget) {
+            resizeObserver.observe(widget);
+            console.log('[DEBUG] ResizeObserver zaczął obserwować element widżetu (#camp-pricing-widget-2024).');
+            // Przerywamy nasłuchiwanie na mutacje, bo widżet już jest
+            mutationObserver.disconnect();
+            fixSectionHeight();
+        } else {
+            // Jeśli widżetu jeszcze nie ma, spróbuj ponownie za chwilę
+            setTimeout(startResizeObserver, 200);
+        }
+    };
+    startResizeObserver();
+
+    // 4. Uruchom przy zmianie rozmiaru okna przeglądarki (responsywność)
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeoutId);
+        resizeTimeoutId = setTimeout(fixSectionHeight, 150);
+    });
+});
+</script>
