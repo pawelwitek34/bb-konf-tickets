@@ -1,0 +1,36 @@
+{
+  "project": "dotulone-1.0",
+  "lastUpdated": "",
+  "activeTier": {
+    "number": 1,
+    "description": "Dla uczestników konferencji",
+    "startDate": "2026-04-01T00:00:00",
+    "endDate": "2026-04-12T23:59:59"
+  },
+  "pricing": [
+    {
+      "id": 1,
+      "internalName": "DOTULONE 1.0 - PULA 1 - JEDNORAZOWO",
+      "displayName": "Płatność jednorazowa",
+      "tierType": "JEDNORAZOWO",
+      "salePrice": 2770,
+      "regularPrice": 3270,
+      "installmentsCount": 1,
+      "cartLink": "https://kursy.badzblizej.pl/s/warsztaty-dotulone.html"
+    },
+    {
+      "id": 2,
+      "internalName": "DOTULONE 1.0 - PULA 1 - RATY",
+      "displayName": "Płatność ratalna",
+      "tierType": "RATY",
+      "salePrice": 970,
+      "regularPrice": null,
+      "installmentsCount": 3,
+      "cartLink": "https://kursy.badzblizej.pl/s/warsztaty-dotulone.html"
+    }
+  ],
+  "availability": {
+    "total": null,
+    "remaining": null
+  }
+}
