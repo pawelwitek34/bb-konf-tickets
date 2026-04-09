@@ -1,6 +1,6 @@
 {
   "project": "camp-2.0",
-  "lastUpdated": "2026-04-09T10:54:15",
+  "lastUpdated": "2026-04-09T19:30:19",
   "pricing": [{
   "id": 1,
   "internalName": "CAMP 2.0 - POKÓJ 2 os. - 1 miejsce - JEDNORAZOWO - PULA 1",
@@ -9,11 +9,11 @@
   "tierDescription": "Dla uczestników konferencji",
   "startDate": "2026-04-01 00:00:00",
   "endDate": "2026-04-12 23:59:59",
-  "salePrice": 1111,
-  "regularPrice": 5555,
+  "salePrice": 2970,
+  "regularPrice": 3270,
   "tierType": "JEDNORAZOWO",
   "installmentsCount": 1,
-  "cartLink": "https://www.braun2025.pl/",
+  "cartLink": "https://kursy.badzblizej.pl/s/camp-1miejsce.html",
   "tierLimit": 100,
   "tierVariant": "solo"
 },{
@@ -24,11 +24,11 @@
   "tierDescription": "Dla uczestników konferencji",
   "startDate": "2026-04-01 00:00:00",
   "endDate": "2026-04-12 23:59:59",
-  "salePrice": 222,
-  "regularPrice": 1111,
+  "salePrice": 1030,
+  "regularPrice": null,
   "tierType": "RATY",
   "installmentsCount": 3,
-  "cartLink": "https://www.braun2025.pl/",
+  "cartLink": "https://kursy.badzblizej.pl/s/camp-1miejsce-raty.html",
   "tierLimit": 100,
   "tierVariant": "solo"
 },{
@@ -39,11 +39,11 @@
   "tierDescription": "Dla uczestników konferencji",
   "startDate": "2026-04-01 00:00:00",
   "endDate": "2026-04-12 23:59:59",
-  "salePrice": 1111,
-  "regularPrice": 5555,
+  "salePrice": 5640,
+  "regularPrice": 6240,
   "tierType": "JEDNORAZOWO",
   "installmentsCount": 1,
-  "cartLink": "https://www.braun2025.pl/",
+  "cartLink": "https://kursy.badzblizej.pl/s/camp-2miejsca.html",
   "tierLimit": 100,
   "tierVariant": "duo"
 },{
@@ -54,11 +54,11 @@
   "tierDescription": "Dla uczestników konferencji",
   "startDate": "2026-04-01 00:00:00",
   "endDate": "2026-04-12 23:59:59",
-  "salePrice": 222,
-  "regularPrice": 1111,
+  "salePrice": 1950,
+  "regularPrice": null,
   "tierType": "RATY",
   "installmentsCount": 3,
-  "cartLink": "https://www.braun2025.pl/",
+  "cartLink": "https://kursy.badzblizej.pl/s/camp-2miejsca-raty.html",
   "tierLimit": 100,
   "tierVariant": "duo"
 }],
