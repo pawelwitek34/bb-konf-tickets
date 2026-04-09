@@ -1,6 +1,6 @@
 {
   "project": "dotulone-1.0",
-  "lastUpdated": "2026-04-09T10:57:36",
+  "lastUpdated": "2026-04-09T19:17:07",
   "pricing": [{
   "id": 1,
   "internalName": "DOTULONE 1.0 - PULA 1 - JEDNORAZOWO",
@@ -26,7 +26,7 @@
   "regularPrice": null,
   "tierType": "RATY",
   "installmentsCount": 3,
-  "cartLink": "https://kursy.badzblizej.pl/s/warsztaty-dotulone.html"
+  "cartLink": "https://kursy.badzblizej.pl/s/warsztaty-dotulone-raty.html"
 }],
   "seats": {
     "total": 30,
