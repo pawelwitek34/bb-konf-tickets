@@ -1,6 +1,6 @@
 {
   "project": "dotulone-1.0",
-  "lastUpdated": "2026-04-09T10:08:44",
+  "lastUpdated": "2026-04-09T10:17:56",
   "pricing": [{
   "id": 1,
   "internalName": "DOTULONE 1.0 - PULA 1 - JEDNORAZOWO",
@@ -28,8 +28,9 @@
   "installmentsCount": 3,
   "cartLink": "https://kursy.badzblizej.pl/s/warsztaty-dotulone.html"
 }],
-  "availability": {
-    "total": null,
-    "remaining": null
+  "seats": {
+    "total": 30,
+    "sold": 0,
+    "remaining": 30
   }
 }
