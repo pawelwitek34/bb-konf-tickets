@@ -1,1 +1,70 @@
-{"a":1}
+{
+  "project": "camp-2.0",
+  "lastUpdated": "2026-04-09T10:54:15",
+  "pricing": [{
+  "id": 1,
+  "internalName": "CAMP 2.0 - POKÓJ 2 os. - 1 miejsce - JEDNORAZOWO - PULA 1",
+  "displayName": "Płatność jednorazowa",
+  "tierNumber": 1,
+  "tierDescription": "Dla uczestników konferencji",
+  "startDate": "2026-04-01 00:00:00",
+  "endDate": "2026-04-12 23:59:59",
+  "salePrice": 1111,
+  "regularPrice": 5555,
+  "tierType": "JEDNORAZOWO",
+  "installmentsCount": 1,
+  "cartLink": "https://www.braun2025.pl/",
+  "tierLimit": 100,
+  "tierVariant": "solo"
+},{
+  "id": 2,
+  "internalName": "CAMP 2.0 - POKÓJ 2 os. - 1 miejsce - RATY - PULA 1",
+  "displayName": "Płatność ratalna",
+  "tierNumber": 1,
+  "tierDescription": "Dla uczestników konferencji",
+  "startDate": "2026-04-01 00:00:00",
+  "endDate": "2026-04-12 23:59:59",
+  "salePrice": 222,
+  "regularPrice": 1111,
+  "tierType": "RATY",
+  "installmentsCount": 3,
+  "cartLink": "https://www.braun2025.pl/",
+  "tierLimit": 100,
+  "tierVariant": "solo"
+},{
+  "id": 3,
+  "internalName": "CAMP 2.0 - POKÓJ 2 os. - 2 miejsca - JEDNORAZOWO - PULA 1",
+  "displayName": "Płatność jednorazowa",
+  "tierNumber": 1,
+  "tierDescription": "Dla uczestników konferencji",
+  "startDate": "2026-04-01 00:00:00",
+  "endDate": "2026-04-12 23:59:59",
+  "salePrice": 1111,
+  "regularPrice": 5555,
+  "tierType": "JEDNORAZOWO",
+  "installmentsCount": 1,
+  "cartLink": "https://www.braun2025.pl/",
+  "tierLimit": 100,
+  "tierVariant": "duo"
+},{
+  "id": 4,
+  "internalName": "CAMP 2.0 - POKÓJ 2 os. - 2 miejsca - RATY - PULA 1",
+  "displayName": "Płatność ratalna",
+  "tierNumber": 1,
+  "tierDescription": "Dla uczestników konferencji",
+  "startDate": "2026-04-01 00:00:00",
+  "endDate": "2026-04-12 23:59:59",
+  "salePrice": 222,
+  "regularPrice": 1111,
+  "tierType": "RATY",
+  "installmentsCount": 3,
+  "cartLink": "https://www.braun2025.pl/",
+  "tierLimit": 100,
+  "tierVariant": "duo"
+}],
+  "seats": {
+    "total": 160,
+    "sold": 0,
+    "remaining": 160
+  }
+}
