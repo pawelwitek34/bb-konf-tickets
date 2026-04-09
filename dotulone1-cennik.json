@@ -1,12 +1,12 @@
 {
   "project": "dotulone-1.0",
-  "lastUpdated": "2026-04-09T10:22:51",
+  "lastUpdated": "2026-04-09T10:57:36",
   "pricing": [{
   "id": 1,
   "internalName": "DOTULONE 1.0 - PULA 1 - JEDNORAZOWO",
   "displayName": "Płatność jednorazowa",
   "tierNumber": 1,
-  "tierDescription": "Dla uczestników konferencji",
+  "tierDescription": "Dla uczestniczek konferencji",
   "startDate": "2026-04-01 00:00:00",
   "endDate": "2026-04-12 23:59:59",
   "salePrice": 2770,
@@ -19,7 +19,7 @@
   "internalName": "DOTULONE 1.0 - PULA 1 - RATY",
   "displayName": "Płatność ratalna",
   "tierNumber": 1,
-  "tierDescription": "Dla uczestników konferencji",
+  "tierDescription": "Dla uczestniczek konferencji",
   "startDate": "2026-04-01 00:00:00",
   "endDate": "2026-04-12 23:59:59",
   "salePrice": 970,
