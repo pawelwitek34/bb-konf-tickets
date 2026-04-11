@@ -1,6 +1,6 @@
 {
   "project": "camp-2.0",
-  "lastUpdated": "2026-04-11T15:57:42",
+  "lastUpdated": "2026-04-11T15:59:54",
   "pricing": [{
   "id": 1,
   "internalName": "CAMP 2.0 - POKÓJ 2 os. - 1 miejsce - JEDNORAZOWO - PULA 1",
@@ -64,7 +64,7 @@
 }],
   "seats": {
     "total": 160,
-    "sold": 4,
-    "remaining": 156
+    "sold": 6,
+    "remaining": 154
   }
 }
