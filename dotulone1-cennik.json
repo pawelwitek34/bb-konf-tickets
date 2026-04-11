@@ -1,6 +1,6 @@
 {
   "project": "dotulone-1.0",
-  "lastUpdated": "2026-04-10T17:02:01",
+  "lastUpdated": "2026-04-11T13:09:54",
   "pricing": [{
   "id": 1,
   "internalName": "DOTULONE 1.0 - PULA 1 - JEDNORAZOWO",
@@ -30,7 +30,7 @@
 }],
   "seats": {
     "total": 30,
-    "sold": 0,
-    "remaining": 30
+    "sold": 1,
+    "remaining": 29
   }
 }
