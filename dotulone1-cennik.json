@@ -1,6 +1,6 @@
 {
   "project": "dotulone-1.0",
-  "lastUpdated": "2026-05-14T00:45:47",
+  "lastUpdated": "2026-05-14T01:02:47",
   "pricing": [{
   "id": 3,
   "internalName": "DOTULONE 1.0 - PULA 2 - JEDNORAZOWO",
@@ -25,10 +25,10 @@
   "startDate": "2026-04-13 00:00:00",
   "endDate": "2026-05-31 23:59:59",
   "salePrice": 5970,
-  "regularPrice": 6180,
+  "regularPrice": 6540,
   "tierType": "JEDNORAZOWO",
   "installmentsCount": 1,
-  "cartLink": "",
+  "cartLink": "https://badzblizej.elms.pl/s/warsztaty-dotulone-2miejsca-pula2.html",
 "optionKey": "duo",
 "optionSeats": 2
 },{
@@ -55,10 +55,10 @@
   "startDate": "2026-04-13 00:00:00",
   "endDate": "2026-05-31 23:59:59",
   "salePrice": 1990,
-  "regularPrice": 2060,
+  "regularPrice": 2180,
   "tierType": "RATY",
   "installmentsCount": 3,
-  "cartLink": "",
+  "cartLink": "https://badzblizej.elms.pl/s/warsztaty-dotulone-raty-pula291.html",
 "optionKey": "duo",
 "optionSeats": 2
 }],
