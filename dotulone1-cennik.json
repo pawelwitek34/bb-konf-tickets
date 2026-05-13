@@ -1,6 +1,6 @@
 {
   "project": "dotulone-1.0",
-  "lastUpdated": "2026-05-10T21:43:15",
+  "lastUpdated": "2026-05-13T15:59:05",
   "pricing": [{
   "id": 3,
   "internalName": "DOTULONE 1.0 - PULA 2 - JEDNORAZOWO",
@@ -10,10 +10,23 @@
   "startDate": "2026-04-13 00:00:00",
   "endDate": "2026-05-31 23:59:59",
   "salePrice": 3270,
-  "regularPrice": null,
+  "regularPrice": 3390,
   "tierType": "JEDNORAZOWO",
   "installmentsCount": 1,
   "cartLink": "https://kursy.badzblizej.pl/s/warsztaty-dotulone-pula2.html"
+},{
+  "id": 3,
+  "internalName": "DOTULONE 1.0 - PULA 2 - JEDNORAZOWO - 2 miejsca",
+  "displayName": "Płatność jednorazowa",
+  "tierNumber": 2,
+  "tierDescription": "",
+  "startDate": "2026-04-13 00:00:00",
+  "endDate": "2026-05-31 23:59:59",
+  "salePrice": 5970,
+  "regularPrice": 6180,
+  "tierType": "JEDNORAZOWO",
+  "installmentsCount": 1,
+  "cartLink": ""
 },{
   "id": 4,
   "internalName": "DOTULONE 1.0 - PULA 2 - RATY",
@@ -22,15 +35,28 @@
   "tierDescription": "",
   "startDate": "2026-04-13 00:00:00",
   "endDate": "2026-05-31 23:59:59",
-  "salePrice": 1170,
-  "regularPrice": null,
+  "salePrice": 1090,
+  "regularPrice": 1130,
   "tierType": "RATY",
   "installmentsCount": 3,
   "cartLink": "https://kursy.badzblizej.pl/s/warsztaty-dotulone-raty-pula2.html"
+},{
+  "id": 4,
+  "internalName": "DOTULONE 1.0 - PULA 2 - RATY - 2 miejsca",
+  "displayName": "Płatność ratalna",
+  "tierNumber": 2,
+  "tierDescription": "",
+  "startDate": "2026-04-13 00:00:00",
+  "endDate": "2026-05-31 23:59:59",
+  "salePrice": 1990,
+  "regularPrice": 2060,
+  "tierType": "RATY",
+  "installmentsCount": 3,
+  "cartLink": ""
 }],
   "seats": {
     "total": 30,
-    "sold": 8,
-    "remaining": 22
+    "sold": 11,
+    "remaining": 19
   }
 }
