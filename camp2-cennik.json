@@ -1,23 +1,8 @@
 {
   "project": "camp-2.0",
-  "lastUpdated": "2026-06-01T11:14:06",
+  "lastUpdated": "2026-06-04T10:14:10",
   "pricing": [{
-  "id": 5,
-  "internalName": "CAMP 2.0 - POKÓJ 2 os. - 1 miejsce - JEDNORAZOWO - PULA 3",
-  "displayName": "Płatność jednorazowa",
-  "tierNumber": 3,
-  "tierDescription": "Cena regularna",
-  "startDate": "2026-05-31 23:59:59",
-  "endDate": "2026-08-31 23:59:59",
-  "salePrice": 3470,
-  "regularPrice": 3670,
-  "tierType": "JEDNORAZOWO",
-  "installmentsCount": 1,
-  "cartLink": "https://kursy.badzblizej.pl/s/camp-1miejsce-pula2.html",
-  "tierLimit": null,
-  "tierVariant": "solo"
-},{
-  "id": 6,
+  "id": 10,
   "internalName": "CAMP 2.0 - POKÓJ 2 os. - 1 miejsce - RATY - PULA 3",
   "displayName": "Płatność ratalna",
   "tierNumber": 3,
@@ -32,7 +17,7 @@
   "tierLimit": null,
   "tierVariant": "solo"
 },{
-  "id": 7,
+  "id": 11,
   "internalName": "CAMP 2.0 - POKÓJ 2 os. - 2 miejsca - JEDNORAZOWO - PULA 3",
   "displayName": "Płatność jednorazowa",
   "tierNumber": 3,
@@ -47,7 +32,7 @@
   "tierLimit": null,
   "tierVariant": "duo"
 },{
-  "id": 8,
+  "id": 12,
   "internalName": "CAMP 2.0 - POKÓJ 2 os. - 2 miejsca - RATY - PULA 3",
   "displayName": "Płatność ratalna",
   "tierNumber": 3,
@@ -61,10 +46,25 @@
   "cartLink": "https://kursy.badzblizej.pl/s/camp-2miejsca-raty-pula2.html",
   "tierLimit": null,
   "tierVariant": "duo"
+},{
+  "id": 9,
+  "internalName": "CAMP 2.0 - POKÓJ 2 os. - 1 miejsce - JEDNORAZOWO - PULA 3",
+  "displayName": "Płatność jednorazowa",
+  "tierNumber": 3,
+  "tierDescription": "Cena regularna",
+  "startDate": "2026-05-31 23:59:59",
+  "endDate": "2026-08-31 23:59:59",
+  "salePrice": 3470,
+  "regularPrice": 3670,
+  "tierType": "JEDNORAZOWO",
+  "installmentsCount": 1,
+  "cartLink": "https://kursy.badzblizej.pl/s/camp-1miejsce-pula2.html",
+  "tierLimit": null,
+  "tierVariant": "solo"
 }],
   "seats": {
     "total": 160,
-    "sold": 51,
-    "remaining": 109
+    "sold": 53,
+    "remaining": 107
   }
 }
