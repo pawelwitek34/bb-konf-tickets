@@ -1,6 +1,6 @@
 {
   "project": "dotulone-1.0",
-  "lastUpdated": "2026-06-01T11:22:52",
+  "lastUpdated": "2026-06-10T16:03:02",
   "pricing": [{
   "id": 10,
   "internalName": "DOTULONE 1.0 - PULA 2 - RATY - 2 miejsca",
@@ -64,7 +64,7 @@
 }],
   "seats": {
     "total": 30,
-    "sold": 13,
-    "remaining": 17
+    "sold": 14,
+    "remaining": 16
   }
 }
