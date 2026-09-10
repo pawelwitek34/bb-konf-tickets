@@ -1,6 +1,6 @@
 {
   "project": "camp-2.0",
-  "lastUpdated": "2026-09-07T14:23:24",
+  "lastUpdated": "2026-09-10T12:30:16",
   "pricing": [{
   "id": 10,
   "internalName": "CAMP 2.0 - POKÓJ 2 os. - 1 miejsce - RATY - PULA 3",
@@ -64,7 +64,7 @@
 }],
   "seats": {
     "total": 160,
-    "sold": 67,
-    "remaining": 93
+    "sold": 68,
+    "remaining": 92
   }
 }
