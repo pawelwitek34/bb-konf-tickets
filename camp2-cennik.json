@@ -1,6 +1,6 @@
 {
   "project": "camp-2.0",
-  "lastUpdated": "2026-09-18T08:39:04",
+  "lastUpdated": "2026-09-18T16:37:43",
   "pricing": [{
   "id": 13,
   "internalName": "CAMP 2.0 - POKÓJ 2 os. - 1 miejsce - JEDNORAZOWO - Pula 4",
@@ -28,7 +28,7 @@
   "regularPrice": null,
   "tierType": "RATY",
   "installmentsCount": 3,
-  "cartLink": "",
+  "cartLink": "https://badzblizej.elms.pl/s/camp-1miejsce-raty-pula294.html",
   "tierLimit": null,
   "tierVariant": "solo"
 },{
@@ -58,7 +58,7 @@
   "regularPrice": null,
   "tierType": "RATY",
   "installmentsCount": 3,
-  "cartLink": "",
+  "cartLink": "https://badzblizej.elms.pl/s/camp-2miejsca-raty-pula295.html",
   "tierLimit": null,
   "tierVariant": "duo"
 }],
