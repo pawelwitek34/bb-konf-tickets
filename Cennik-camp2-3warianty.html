@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CAMP 2.0 — kopia cennika, trzy pakiety solo, do bloku HTML Landingi.
+     Zachowana stylistyka Cennik-camp2-nowy.html; własny CSS i JS.
+     Publikacja: oba nowe pliki JSON umieść w głównym katalogu bb-konf-tickets.
+     Lokalny podgląd: python3 -m http.server 8765, następnie otwórz ten plik
+     przez http://localhost:8765/ (fetch nie działa przez file://).
+     Ceny/opisy/linki: camp2-3warianty-config.json; kolejność = kolejność packages.
+     Raty: payments.installments.enabled=true, uzupełnij count, amount (jedna rata)
+     i cartLink w promo ORAZ final. Do tego czasu przełącznik pozostaje ukryty.
+     Miejsca: camp2-3warianty-availability.json — wartości startowe, bez integracji.
+     WooCommerce musi niezależnie egzekwować limity i harmonogram cen.
+-->
+<div id="camp2-pricing-3warianty">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap');
+    @font-face {
+        font-family: 'CPW3 ChunkFive';
+        font-style: normal;
+        font-weight: 400;
+        src: local('ChunkFive Ex'), url('https://fonts.cdnfonts.com/s/13633/Chunkfive Ex.woff') format('woff');
+    }
+    #camp2-pricing-3warianty { box-sizing: border-box; font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #370f11; background: transparent; padding: 24px 12px; width: 100%; }
+    #camp2-pricing-3warianty *, #camp2-pricing-3warianty *::before, #camp2-pricing-3warianty *::after { box-sizing: border-box; }
+    #camp2-pricing-3warianty [hidden] { display: none !important; }
+    #camp2-pricing-3warianty .cpw-container { max-width: 1180px; margin: 0 auto; }
+    #camp2-pricing-3warianty .cpw-header { text-align: center; margin-bottom: 32px; }
+    #camp2-pricing-3warianty .cpw-title { font-family: 'CPW3 ChunkFive', Georgia, serif; font-size: clamp(30px, 4vw, 42px); font-weight: 400; line-height: 1.15; margin: 0 0 14px; }
+    #camp2-pricing-3warianty .cpw-subtitle { color: #64748b; font-size: 16px; line-height: 1.6; margin: 0; }
+    #camp2-pricing-3warianty .cpw-countdown-container { margin-top: 28px; }
+    #camp2-pricing-3warianty .cpw-countdown-headline { font-size: 16px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; margin: 0 0 16px; }
+    #camp2-pricing-3warianty .cpw-countdown { display: flex; justify-content: center; gap: 10px; }
+    #camp2-pricing-3warianty .cpw-countdown-item { background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.08); padding: 12px 10px; min-width: 58px; }
+    #camp2-pricing-3warianty .cpw-countdown-value { color: #ed6a11; font-size: 26px; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+    #camp2-pricing-3warianty .cpw-countdown-label { color: #64748b; font-size: 10px; font-weight: 700; text-transform: uppercase; margin-top: 6px; }
+    #camp2-pricing-3warianty .cpw-countdown-deadline { color: #475569; font-size: 12px; line-height: 1.5; margin: 16px 0 0; }
+    #camp2-pricing-3warianty .cpw-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; max-width: 580px; margin: 0 auto; }
+    #camp2-pricing-3warianty .cpw-card { --cpw-accent: #ee9c70; --cpw-hover: #e48e61; --cpw-soft: #fbe7d9; --cpw-border: #f4c7aa; display: flex; flex-direction: column; min-width: 0; border: 2px solid var(--cpw-border); border-radius: 18px; overflow: hidden; background: #f8fafc; box-shadow: 0 14px 34px rgba(55,15,17,.08); }
+    #camp2-pricing-3warianty .cpw-card[data-package="B"] { --cpw-accent: #c6d88a; --cpw-hover: #b5cc6a; --cpw-soft: #e8f0cd; --cpw-border: #c6d88a; background: #f8fbf1; }
+    #camp2-pricing-3warianty .cpw-card[data-package="C"] { --cpw-accent: #e8cbb3; --cpw-hover: #ddbba0; --cpw-soft: #f6eee7; --cpw-border: #e8cbb3; }
+    #camp2-pricing-3warianty .cpw-card-heading { padding: 24px 22px 20px; background: var(--cpw-soft); border-bottom: 1px solid var(--cpw-border); }
+    #camp2-pricing-3warianty .cpw-variant { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 10px; }
+    #camp2-pricing-3warianty .cpw-card-title { font-size: 24px; line-height: 1.2; font-weight: 700; margin: 0 0 8px; }
+    #camp2-pricing-3warianty .cpw-card-subtitle { font-size: 14px; line-height: 1.5; margin: 0; min-height: 42px; }
+    #camp2-pricing-3warianty .cpw-badge { display: inline-block; font-size: 11px; font-weight: 700; line-height: 1.4; padding: 5px 9px; margin-top: 14px; border: 1px solid var(--cpw-border); background: rgba(255,255,255,.65); border-radius: 99px; }
+    #camp2-pricing-3warianty .cpw-card-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
+    #camp2-pricing-3warianty .cpw-features { list-style: none; margin: 0; padding: 0; color: #475569; font-size: 14px; line-height: 1.6; }
+    #camp2-pricing-3warianty .cpw-features li { position: relative; padding-left: 24px; margin-bottom: 12px; }
+    #camp2-pricing-3warianty .cpw-features li::before { content: '✓'; position: absolute; left: 0; font-weight: 800; color: #687c35; }
+    #camp2-pricing-3warianty .cpw-highlight { background: var(--cpw-soft); border-radius: 10px; padding: 13px; font-size: 13px; line-height: 1.6; margin: 4px 0 24px; }
+    #camp2-pricing-3warianty .cpw-purchase { margin-top: auto; padding-top: 8px; }
+    #camp2-pricing-3warianty .cpw-payment { border: 0; padding: 0; margin: 0 0 18px; min-width: 0; }
+    #camp2-pricing-3warianty .cpw-payment legend { font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+    #camp2-pricing-3warianty .cpw-segments { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); border: 1px solid #d9e0e8; border-radius: 12px; background: #edf1f5; padding: 4px; }
+    #camp2-pricing-3warianty .cpw-segments label { position: relative; display: block; cursor: pointer; }
+    #camp2-pricing-3warianty .cpw-segments input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+    #camp2-pricing-3warianty .cpw-segments span { display: block; border: 1px solid transparent; padding: 10px 4px; border-radius: 9px; text-align: center; font-size: 12px; font-weight: 700; color: #64748b; }
+    #camp2-pricing-3warianty .cpw-segments input:checked + span { background: #fff; border-color: var(--cpw-border); color: #370f11; box-shadow: 0 3px 10px rgba(30,41,59,.1); }
+    #camp2-pricing-3warianty .cpw-segments input:focus-visible + span { outline: 3px solid #370f11; outline-offset: 1px; }
+    #camp2-pricing-3warianty .cpw-price { text-align: center; margin-bottom: 18px; }
+    #camp2-pricing-3warianty .cpw-price-original { display: block; color: #64748b; font-size: 16px; margin-bottom: 8px; }
+    #camp2-pricing-3warianty .cpw-price-amount { display: block; color: #370f11; font-size: clamp(30px, 3vw, 38px); font-weight: 800; letter-spacing: -1px; line-height: 1.2; font-variant-numeric: tabular-nums; }
+    #camp2-pricing-3warianty .cpw-price-amount.cpw-in-rates { font-size: 28px; }
+    #camp2-pricing-3warianty .cpw-price-total { color: #475569; font-size: 13px; margin: 8px 0 0; }
+    #camp2-pricing-3warianty .cpw-price-info { font-size: 12px; color: #64748b; margin: 8px 0 0; }
+    #camp2-pricing-3warianty .cpw-price-saved { font-size: 12px; color: #577024; font-weight: 600; margin: 8px 0 0; }
+    #camp2-pricing-3warianty .cpw-availability { min-height: 22px; text-align: center; font-size: 13px; font-weight: 600; color: #475569; margin: 0 0 14px; }
+    #camp2-pricing-3warianty .cpw-cta { display: block; width: 100%; background: var(--cpw-accent); color: #370f11; font: inherit; font-size: 14px; font-weight: 700; text-align: center; padding: 16px 8px; border: 0; border-radius: 8px; text-decoration: none; transition: background-color .2s ease, transform .2s ease; }
+    #camp2-pricing-3warianty .cpw-cta:hover { background: var(--cpw-hover); transform: translateY(-1px); }
+    #camp2-pricing-3warianty .cpw-cta:focus-visible { outline: 3px solid #370f11; outline-offset: 3px; }
+    #camp2-pricing-3warianty .cpw-cta[aria-disabled="true"] { background: #cbd5e1; color: #475569; cursor: not-allowed; transform: none; }
+    #camp2-pricing-3warianty .cpw-sold-out .cpw-badge { background: #475569; color: #fff; border-color: #475569; }
+    #camp2-pricing-3warianty .cpw-status { text-align: center; color: #475569; padding: 28px 16px; line-height: 1.6; }
+    #camp2-pricing-3warianty .cpw-retry { max-width: 260px; margin: 16px auto 0; cursor: pointer; }
+    #camp2-pricing-3warianty .cpw-footer { text-align: center; font-size: 13px; color: #64748b; margin: 26px 0 0; line-height: 1.6; }
+    #camp2-pricing-3warianty .cpw-footer a { color: #370f11; text-underline-offset: 3px; }
+    @media (min-width: 640px) {
+        #camp2-pricing-3warianty { padding: 48px 16px; }
+        #camp2-pricing-3warianty .cpw-countdown { gap: 20px; }
+        #camp2-pricing-3warianty .cpw-countdown-item { padding: 16px 20px; min-width: 80px; }
+        #camp2-pricing-3warianty .cpw-countdown-value { font-size: 32px; }
+    }
+    @media (min-width: 1024px) {
+        #camp2-pricing-3warianty .cpw-grid { max-width: none; grid-template-columns: repeat(3, minmax(0,1fr)); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        #camp2-pricing-3warianty .cpw-cta { transition: none; }
+    }
+</style>
+<div class="cpw-container">
+    <header class="cpw-header">
+        <h2 class="cpw-title">Cennik</h2>
+        <p class="cpw-subtitle">Wybierz swój pakiet. Każdy bilet jest dla jednej osoby.</p>
+        <div class="cpw-countdown-container" hidden>
+            <h3 class="cpw-countdown-headline"></h3>
+            <div class="cpw-countdown" role="timer" aria-label="Czas do końca niższej ceny">
+                <div class="cpw-countdown-item"><div class="cpw-countdown-value" data-time="days">00</div><div class="cpw-countdown-label">dni</div></div>
+                <div class="cpw-countdown-item"><div class="cpw-countdown-value" data-time="hours">00</div><div class="cpw-countdown-label">godzin</div></div>
+                <div class="cpw-countdown-item"><div class="cpw-countdown-value" data-time="minutes">00</div><div class="cpw-countdown-label">minut</div></div>
+                <div class="cpw-countdown-item"><div class="cpw-countdown-value" data-time="seconds">00</div><div class="cpw-countdown-label">sekund</div></div>
+            </div>
+            <p class="cpw-countdown-deadline"></p>
+        </div>
+    </header>
+    <div class="cpw-status" role="status"><span class="cpw-status-text">Ładowanie cennika…</span><button class="cpw-cta cpw-retry" type="button" hidden>Spróbuj ponownie</button></div>
+    <div class="cpw-grid" hidden></div>
+    <noscript><p class="cpw-status">Włącz JavaScript, aby zobaczyć ceny. <a href="https://badzblizej.pl/checkouts/camp/">Przejdź do rezerwacji</a>.</p></noscript>
+    <p class="cpw-footer">Masz pytania? <a href="#kontakt">Skontaktuj się z nami</a></p>
+</div>
+<script>
+(function () {
+    'use strict';
+    var root = document.getElementById('camp2-pricing-3warianty');
+    if (!root || root.dataset.initialized) return;
+    root.dataset.initialized = 'true';
+
+    // Na localhost oba JSON-y są pobierane z katalogu obok HTML.
+    // Na Landingi korzystamy z nowych plików GitHub, niezależnych od arkusza.
+    var isLocal = ['localhost', '127.0.0.1', '[::1]'].indexOf(location.hostname) !== -1;
+    var dataBase = isLocal ? './' : 'https://raw.githubusercontent.com/pawelwitek34/bb-konf-tickets/main/';
+    var CONFIG_URL = dataBase + 'camp2-3warianty-config.json';
+    var AVAILABILITY_URL = dataBase + 'camp2-3warianty-availability.json';
+    var config = null;
+    var availability = null;
+    var cards = [];
+    var phase = null;
+    var countdownInterval = null;
+    var availabilityInterval = null;
+    var availabilityRequest = null;
+    var loading = false;
+    var grid = root.querySelector('.cpw-grid');
+    var status = root.querySelector('.cpw-status');
+    var retry = root.querySelector('.cpw-retry');
+    var countdown = root.querySelector('.cpw-countdown-container');
+    var timer = countdown.querySelector('[role="timer"]');
+    var moneyFormatter = new Intl.NumberFormat('pl-PL', { maximumFractionDigits: 2, useGrouping: 'always' });
+
+    function money(value) { return moneyFormatter.format(value) + ' zł'; }
+    function setText(element, value) { if (element.textContent !== value) element.textContent = value; }
+    function element(tag, className, text) {
+        var node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text !== undefined) node.textContent = text;
+        return node;
+    }
+    function positiveNumber(value) { return typeof value === 'number' && Number.isFinite(value) && value > 0; }
+    function safeLink(value) {
+        if (typeof value !== 'string') return false;
+        try { return new URL(value).protocol === 'https:'; } catch (error) { return false; }
+    }
+    function validPayment(payment, rates) {
+        return payment && positiveNumber(payment.amount) && safeLink(payment.cartLink)
+            && (!rates || (Number.isInteger(payment.count) && payment.count >= 2));
+    }
+    function ratesAvailable(item) {
+        var rates = item.payments.installments;
+        return rates && rates.enabled === true && validPayment(rates.promo, true) && validPayment(rates.final, true);
+    }
+    function explicitDate(value) {
+        return typeof value === 'string' && /T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})$/.test(value) && Number.isFinite(Date.parse(value));
+    }
+    function validateConfig(data) {
+        if (!data || data.timezone !== 'Europe/Warsaw' || !explicitDate(data.pricingSwitchAt)
+            || !explicitDate(data.eventStart) || Date.parse(data.eventStart) <= Date.parse(data.pricingSwitchAt)
+            || !Array.isArray(data.packages) || data.packages.length !== 3) throw new Error('Niepoprawna konfiguracja');
+        var ids = [];
+        data.packages.forEach(function (item) {
+            if (!item || ['A', 'B', 'C'].indexOf(item.id) === -1 || ids.indexOf(item.id) !== -1
+                || typeof item.name !== 'string' || !item.name.trim() || typeof item.subtitle !== 'string'
+                || !Array.isArray(item.features) || !item.features.every(function (feature) { return typeof feature === 'string'; })
+                || !item.payments || !item.payments.once || !validPayment(item.payments.once.promo, false)
+                || !validPayment(item.payments.once.final, false)
+                || item.payments.once.final.amount < item.payments.once.promo.amount) throw new Error('Niepoprawny pakiet');
+            ids.push(item.id);
+        });
+        return data;
+    }
+    async function fetchJson(url) {
+        var controller = new AbortController();
+        var timeout = setTimeout(function () { controller.abort(); }, 8000);
+        try {
+            var response = await fetch(url + '?v=' + Date.now(), { cache: 'no-store', signal: controller.signal });
+            if (!response.ok) throw new Error('Błąd pobierania');
+            return await response.json();
+        } finally { clearTimeout(timeout); }
+    }
+    function remainingFor(id) {
+        var item = availability && availability.packages && availability.packages[id];
+        return item && Number.isInteger(item.remaining) && item.remaining >= 0 ? item.remaining : null;
+    }
+    function seatWord(count) {
+        if (count === 1) return 'miejsce';
+        return count % 10 >= 2 && count % 10 <= 4 && !(count % 100 >= 12 && count % 100 <= 14) ? 'miejsca' : 'miejsc';
+    }
+    function updateAvailability() {
+        cards.forEach(function (card) {
+            var remaining = remainingFor(card.item.id);
+            var soldOut = remaining === 0;
+            card.node.classList.toggle('cpw-sold-out', soldOut);
+            setText(card.badge, soldOut ? 'Wyprzedane' : (card.item.badge || ''));
+            card.badge.hidden = !soldOut && !card.item.badge;
+            setText(card.availability, remaining === null ? 'Sprawdź dostępność w koszyku'
+                : soldOut ? 'Brak wolnych miejsc' : 'Pozostało ' + remaining + ' ' + seatWord(remaining));
+            card.cta.setAttribute('aria-disabled', String(soldOut));
+            if (soldOut) {
+                card.cta.removeAttribute('href');
+                card.cta.setAttribute('tabindex', '-1');
+            } else {
+                card.cta.href = card.item.payments[card.method][phase].cartLink;
+                card.cta.removeAttribute('tabindex');
+            }
+            setText(card.cta, soldOut ? 'Wyprzedane' : card.method === 'installments' ? 'Rezerwuję w ratach →' : 'Rezerwuję miejsce →');
+        });
+    }
+    function updatePrice(card) {
+        var rates = card.method === 'installments';
+        var payment = card.item.payments[card.method][phase];
+        var finalPayment = card.item.payments[card.method].final;
+        var total = payment.amount * (rates ? payment.count : 1);
+        var finalTotal = finalPayment.amount * (rates ? finalPayment.count : 1);
+        var showRegular = phase === 'promo' && finalTotal > total;
+        card.regular.hidden = !showRegular;
+        setText(card.regular, rates ? finalPayment.count + ' × ' + money(finalPayment.amount) : money(finalPayment.amount));
+        setText(card.amount, rates ? payment.count + ' × ' + money(payment.amount) : money(payment.amount));
+        card.amount.classList.toggle('cpw-in-rates', rates);
+        card.total.hidden = !rates;
+        setText(card.total, 'Łącznie: ' + money(total));
+        setText(card.info, rates ? 'Dla 1 osoby · płatność ratalna' : 'Dla 1 osoby · płatność jednorazowa');
+        card.saved.hidden = !showRegular;
+        setText(card.saved, showRegular ? 'Oszczędzasz ' + money(Math.round((finalTotal - total) * 100) / 100) : '');
+    }
+    function buildCard(item) {
+        var card = { item: item, method: 'once', node: element('article', 'cpw-card') };
+        card.node.dataset.package = item.id;
+        var heading = element('div', 'cpw-card-heading');
+        heading.appendChild(element('p', 'cpw-variant', 'Wariant ' + item.id));
+        var title = element('h3', 'cpw-card-title', item.name);
+        title.id = 'cpw3-title-' + item.id;
+        card.node.setAttribute('aria-labelledby', title.id);
+        heading.appendChild(title);
+        heading.appendChild(element('p', 'cpw-card-subtitle', item.subtitle));
+        card.badge = element('span', 'cpw-badge', item.badge || '');
+        heading.appendChild(card.badge);
+        card.node.appendChild(heading);
+        var body = element('div', 'cpw-card-body');
+        var features = element('ul', 'cpw-features');
+        item.features.forEach(function (feature) { features.appendChild(element('li', '', feature)); });
+        body.appendChild(features);
+        if (item.highlight) body.appendChild(element('p', 'cpw-highlight', item.highlight));
+        var purchase = element('div', 'cpw-purchase');
+        if (ratesAvailable(item)) {
+            var fieldset = element('fieldset', 'cpw-payment');
+            fieldset.appendChild(element('legend', '', 'Sposób płatności'));
+            var segments = element('div', 'cpw-segments');
+            ['once', 'installments'].forEach(function (method) {
+                var label = element('label');
+                var input = element('input');
+                input.type = 'radio';
+                input.name = 'cpw3-payment-' + item.id;
+                input.value = method;
+                input.checked = method === card.method;
+                input.addEventListener('change', function () {
+                    card.method = method;
+                    updatePrice(card);
+                    updateAvailability();
+                });
+                label.appendChild(input);
+                label.appendChild(element('span', '', method === 'once' ? 'Jednorazowo' : 'W ratach'));
+                segments.appendChild(label);
+            });
+            fieldset.appendChild(segments);
+            purchase.appendChild(fieldset);
+        }
+        var price = element('div', 'cpw-price');
+        price.setAttribute('aria-live', 'polite');
+        card.regular = element('s', 'cpw-price-original');
+        card.amount = element('strong', 'cpw-price-amount');
+        card.total = element('p', 'cpw-price-total');
+        card.info = element('p', 'cpw-price-info');
+        card.saved = element('p', 'cpw-price-saved');
+        [card.regular, card.amount, card.total, card.info, card.saved].forEach(function (node) { price.appendChild(node); });
+        purchase.appendChild(price);
+        card.availability = element('p', 'cpw-availability');
+        card.availability.setAttribute('aria-live', 'polite');
+        purchase.appendChild(card.availability);
+        card.cta = element('a', 'cpw-cta');
+        card.cta.addEventListener('click', function (event) { if (card.cta.getAttribute('aria-disabled') === 'true') event.preventDefault(); });
+        purchase.appendChild(card.cta);
+        body.appendChild(purchase);
+        card.node.appendChild(body);
+        return card;
+    }
+    function formatDate(timestamp) {
+        return new Intl.DateTimeFormat('pl-PL', {
+            timeZone: config.timezone, day: 'numeric', month: 'long', year: 'numeric',
+            hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23'
+        }).format(new Date(timestamp));
+    }
+    function tick() {
+        if (!config) return;
+        var now = Date.now();
+        var switchAt = Date.parse(config.pricingSwitchAt);
+        var eventStart = Date.parse(config.eventStart);
+        var nextPhase = now < switchAt ? 'promo' : 'final';
+        if (phase !== nextPhase) {
+            phase = nextPhase;
+            cards.forEach(updatePrice);
+            updateAvailability();
+        }
+        var started = now >= eventStart;
+        countdown.hidden = false;
+        timer.hidden = started;
+        setText(countdown.querySelector('.cpw-countdown-headline'), started ? 'Camp już się rozpoczął'
+            : phase === 'promo' ? 'Koniec niższej ceny za:' : 'Do startu Campu pozostało:');
+        setText(countdown.querySelector('.cpw-countdown-deadline'), phase === 'promo'
+            ? 'Niższa cena tylko do: ' + formatDate(switchAt - 1000) + ' (czas polski)'
+            : 'Start Campu: ' + formatDate(eventStart) + ' (czas polski)');
+        if (started) {
+            clearInterval(countdownInterval);
+            countdownInterval = null;
+            return;
+        }
+        var seconds = Math.max(0, Math.ceil(((phase === 'promo' ? switchAt : eventStart) - now) / 1000));
+        var values = { days: Math.floor(seconds / 86400), hours: Math.floor(seconds / 3600) % 24, minutes: Math.floor(seconds / 60) % 60, seconds: seconds % 60 };
+        timer.setAttribute('aria-label', phase === 'promo' ? 'Czas do końca niższej ceny' : 'Czas do startu Campu');
+        Object.keys(values).forEach(function (key) { setText(timer.querySelector('[data-time="' + key + '"]'), String(values[key]).padStart(2, '0')); });
+    }
+    function refreshAvailability() {
+        if (availabilityRequest) return availabilityRequest;
+        availabilityRequest = fetchJson(AVAILABILITY_URL).then(function (data) {
+            if (!data || !explicitDate(data.updatedAt) || !data.packages || typeof data.packages !== 'object') throw new Error('Niepoprawna dostępność');
+            availability = data;
+        }).catch(function () {
+            // Brak wiarygodnych danych: nie pokazujemy ani starych liczb, ani fikcyjnego zera.
+            availability = null;
+        }).finally(function () {
+            availabilityRequest = null;
+            if (config && phase) updateAvailability();
+        });
+        return availabilityRequest;
+    }
+    async function load() {
+        if (loading) return;
+        loading = true;
+        status.hidden = false;
+        retry.hidden = true;
+        grid.hidden = true;
+        countdown.hidden = true;
+        setText(status.querySelector('.cpw-status-text'), 'Ładowanie cennika…');
+        var availabilityReady = refreshAvailability();
+        try {
+            config = validateConfig(await fetchJson(CONFIG_URL));
+            grid.replaceChildren();
+            cards = config.packages.map(buildCard);
+            cards.forEach(function (card) { grid.appendChild(card.node); });
+            phase = null;
+            tick();
+            status.hidden = true;
+            grid.hidden = false;
+            if (Date.now() < Date.parse(config.eventStart)) countdownInterval = setInterval(tick, 1000);
+            if (!availabilityInterval) availabilityInterval = setInterval(refreshAvailability, 60000);
+            await availabilityReady;
+        } catch (error) {
+            config = null;
+            setText(status.querySelector('.cpw-status-text'), 'Nie udało się załadować cennika. Spróbuj ponownie.');
+            retry.hidden = false;
+        } finally { loading = false; }
+    }
+    retry.addEventListener('click', load);
+    document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'visible' && config) { tick(); refreshAvailability(); }
+    });
+    load();
+})();
+</script>
+</div>

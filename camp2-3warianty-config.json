@@ -1,0 +1,80 @@
+{
+  "project": "camp-2.0-3warianty",
+  "timezone": "Europe/Warsaw",
+  "pricingSwitchAt": "2026-10-11T00:00:00+02:00",
+  "eventStart": "2026-10-22T10:00:00+02:00",
+  "packages": [
+    {
+      "id": "A",
+      "name": "Pakiet Główny",
+      "subtitle": "Hotel Beskidzki Raj",
+      "badge": "Ostatnie wolne miejsca!",
+      "features": [
+        "Pełny program warsztatowy",
+        "Pełne wyżywienie",
+        "Udział we wszystkich integracjach",
+        "Nocleg bezpośrednio na terenie głównego kompleksu"
+      ],
+      "highlight": "Wszystko w jednym miejscu — Hotel Beskidzki Raj.",
+      "payments": {
+        "once": {
+          "promo": { "amount": 3670, "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=1" },
+          "final": { "amount": 3770, "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=1" }
+        },
+        "installments": {
+          "enabled": false,
+          "promo": { "count": null, "amount": null, "cartLink": null },
+          "final": { "count": null, "amount": null, "cartLink": null }
+        }
+      }
+    },
+    {
+      "id": "B",
+      "name": "Pakiet Komfort",
+      "subtitle": "Hotel Jawor + dedykowany transfer",
+      "badge": "Pula limitowana: 10 miejsc",
+      "features": [
+        "Pełny program warsztatowy",
+        "Wyżywienie i wieczorne imprezy w Hotelu Beskidzki Raj",
+        "2 noclegi w Hotelu Jawor (piątek–niedziela)",
+        "Komfortowy hotel, około 20 minut dojazdu"
+      ],
+      "highlight": "Gwarantowany transport: prywatny bus między hotelami rano i po zakończeniu wieczornych integracji.",
+      "payments": {
+        "once": {
+          "promo": { "amount": 2970, "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=2" },
+          "final": { "amount": 3070, "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=2" }
+        },
+        "installments": {
+          "enabled": false,
+          "promo": { "count": null, "amount": null, "cartLink": null },
+          "final": { "count": null, "amount": null, "cartLink": null }
+        }
+      }
+    },
+    {
+      "id": "C",
+      "name": "Day Pass",
+      "subtitle": "Pakiet warsztatowy bez noclegu",
+      "badge": "Pula limitowana: 20 miejsc",
+      "features": [
+        "Udział w warsztatach przez cały Camp",
+        "Obiady i kolacje w cenie",
+        "Wstęp na wieczorne integracje w Hotelu Beskidzki Raj",
+        "Nocleg we własnym zakresie — bez śniadań"
+      ],
+      "highlight": "Cały Camp i wspólne wieczory — nocleg organizujesz samodzielnie.",
+      "payments": {
+        "once": {
+          "promo": { "amount": 2470, "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=3" },
+          "final": { "amount": 2570, "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=3" }
+        },
+        "installments": {
+          "enabled": false,
+          "promo": { "count": null, "amount": null, "cartLink": null },
+          "final": { "count": null, "amount": null, "cartLink": null }
+        }
+      }
+    }
+  ]
+}
