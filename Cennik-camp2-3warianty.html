@@ -9,7 +9,7 @@
      Ceny/opisy/linki: camp2-3warianty-config.json; kolejność = kolejność packages.
      Raty: payments.installments.enabled=true, uzupełnij count, amount (jedna rata)
      i cartLink w promo ORAZ final. Do tego czasu przełącznik pozostaje ukryty.
-     Miejsca: camp2-3warianty-availability.json — wartości startowe, bez integracji.
+     Miejsca: camp2-3warianty-availability.json — stany WooCommerce aktualizowane przez Make.
      WooCommerce musi niezależnie egzekwować limity i harmonogram cen.
 -->
 <div id="camp2-pricing-3warianty">
@@ -161,6 +161,63 @@
         // Landingi usuwa backslashe w kodzie osadzanym; zapis cyfr nie wymaga escapowania.
         return typeof value === 'string' && /T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:Z|[+-][0-9]{2}:[0-9]{2})$/.test(value) && Number.isFinite(Date.parse(value));
     }
+    function setupLandingiSizing() {
+        var host = root.closest('.widget-html');
+        var section = host && host.closest('.widget-section');
+        var container = host && host.closest('.container');
+        var row = container && container.closest('.row');
+        if (!section || !container || !section.contains(container) || !row || !section.contains(row)) return function () {};
+        // Landingi pozycjonuje blok HTML absolutnie. Powiększamy tylko sekcję tego widgetu.
+        var boxes = [host, container, row, section];
+        var originalHeights = boxes.map(function (box) {
+            return { value: box.style.getPropertyValue('height'), priority: box.style.getPropertyPriority('height') };
+        });
+        var pending = false;
+        function resize() {
+            pending = false;
+            if (!root.isConnected || !root.offsetWidth) return;
+            // Odczytujemy wysokości z właściwego breakpointu, żeby sekcja mogła także maleć.
+            boxes.forEach(function (box, index) {
+                var original = originalHeights[index];
+                if (original.value) box.style.setProperty('height', original.value, original.priority);
+                else box.style.removeProperty('height');
+            });
+            var rootBottom = root.getBoundingClientRect().bottom;
+            host.style.setProperty('height', Math.ceil(rootBottom - host.getBoundingClientRect().top) + 'px', 'important');
+            [container, row, section].forEach(function (box) {
+                var height = Math.max(box.getBoundingClientRect().height, Math.ceil(rootBottom - box.getBoundingClientRect().top + 32));
+                box.style.setProperty('height', height + 'px', 'important');
+            });
+        }
+        function schedule() {
+            if (!pending) { pending = true; requestAnimationFrame(resize); }
+        }
+        if (typeof ResizeObserver === 'function') {
+            var observer = new ResizeObserver(schedule);
+            observer.observe(root);
+        }
+        window.addEventListener('resize', schedule);
+        window.addEventListener('load', schedule);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
+        schedule();
+        return schedule;
+    }
+    var scheduleLandingiHeight = setupLandingiSizing();
+    function setupContactLink() {
+        var footer = root.querySelector('.cpw-footer');
+        var link = footer.querySelector('a');
+        if (document.getElementById('kontakt')) return;
+        var contact = Array.from(document.querySelectorAll('a[href^="#"]')).find(function (candidate) {
+            var target = candidate.getAttribute('href').slice(1);
+            return !root.contains(candidate) && candidate.textContent.trim().toLowerCase() === 'kontakt'
+                && target && document.getElementById(target);
+        });
+        if (contact) link.setAttribute('href', contact.getAttribute('href'));
+        else footer.hidden = true;
+        scheduleLandingiHeight();
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setupContactLink, { once: true });
+    else setupContactLink();
     function validateConfig(data) {
         if (!data || data.timezone !== 'Europe/Warsaw' || !explicitDate(data.pricingSwitchAt)
             || !explicitDate(data.eventStart) || Date.parse(data.eventStart) <= Date.parse(data.pricingSwitchAt)
@@ -213,6 +270,7 @@
             }
             setText(card.cta, soldOut ? 'Wyprzedane' : card.method === 'installments' ? 'Rezerwuję w ratach →' : 'Rezerwuję miejsce →');
         });
+        scheduleLandingiHeight();
     }
     function updatePrice(card) {
         var rates = card.method === 'installments';
@@ -366,7 +424,7 @@
             config = null;
             setText(status.querySelector('.cpw-status-text'), 'Nie udało się załadować cennika. Spróbuj ponownie.');
             retry.hidden = false;
-        } finally { loading = false; }
+        } finally { loading = false; scheduleLandingiHeight(); }
     }
     retry.addEventListener('click', load);
     document.addEventListener('visibilitychange', function () {
