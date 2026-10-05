@@ -6,7 +6,7 @@
   "packages": [
     {
       "id": "A",
-      "name": "Pakiet Główny",
+      "name": "Pakiet dla 1 osoby",
       "subtitle": "Hotel Beskidzki Raj",
       "badge": "Ostatnie wolne miejsca!",
       "features": [
@@ -28,7 +28,7 @@
           }
         },
         "installments": {
-          "enabled": false,
+          "enabled": true,
           "promo": {
             "count": 3,
             "amount": 1224,
@@ -40,7 +40,50 @@
             "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2025"
           }
         }
-      }
+      },
+      "theme": "peach"
+    },
+    {
+      "id": "A2",
+      "name": "Pakiet dla 2 osób",
+      "subtitle": "Hotel Beskidzki Raj · jeden bilet dla dwóch osób",
+      "badge": "Dla dwojga",
+      "features": [
+        "Pełny program warsztatowy dla 2 osób",
+        "Pełne wyżywienie",
+        "Udział we wszystkich integracjach",
+        "Nocleg bezpośrednio na terenie głównego kompleksu"
+      ],
+      "highlight": "Jedziecie we dwoje? Wychodzi taniej niż dwa osobne pakiety dla 1 osoby.",
+      "payments": {
+        "once": {
+          "promo": {
+            "amount": 7040,
+            "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-add-to-checkout=1981&aero-qty=2&aero-coupons=camp-pakietglowny-2osoby"
+          },
+          "final": {
+            "amount": 7240,
+            "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-add-to-checkout=1981&aero-qty=2&aero-coupons=camp-pakietglowny-2osoby"
+          }
+        },
+        "installments": {
+          "enabled": true,
+          "promo": {
+            "count": 3,
+            "amount": 2346,
+            "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2032"
+          },
+          "final": {
+            "count": 3,
+            "amount": 2413,
+            "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2032"
+          }
+        }
+      },
+      "theme": "green",
+      "stock": "A",
+      "persons": 2,
+      "featured": true
     },
     {
       "id": "B",
@@ -66,7 +109,7 @@
           }
         },
         "installments": {
-          "enabled": false,
+          "enabled": true,
           "promo": {
             "count": 3,
             "amount": 990,
@@ -78,12 +121,14 @@
             "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2026"
           }
         }
-      }
+      },
+      "hidden": true,
+      "theme": "green"
     },
     {
       "id": "C",
-      "name": "Day Pass",
-      "subtitle": "Pakiet warsztatowy bez noclegu",
+      "name": "Pakiet bez noclegu",
+      "subtitle": "Warsztaty, wyżywienie, integracje",
       "badge": "Pula limitowana",
       "features": [
         "Udział w warsztatach przez cały Camp",
@@ -104,7 +149,7 @@
           }
         },
         "installments": {
-          "enabled": false,
+          "enabled": true,
           "promo": {
             "count": 3,
             "amount": 824,
@@ -116,7 +161,8 @@
             "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2027"
           }
         }
-      }
+      },
+      "theme": "sand"
     }
   ]
 }
