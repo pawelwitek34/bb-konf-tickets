@@ -66,6 +66,7 @@
     #camp2-pricing-3warianty .cpw-price-info { font-size: 12px; color: #64748b; margin: 8px 0 0; }
     #camp2-pricing-3warianty .cpw-price-saved { font-size: 12px; color: #577024; font-weight: 600; margin: 8px 0 0; }
     #camp2-pricing-3warianty .cpw-availability { min-height: 22px; text-align: center; font-size: 13px; font-weight: 600; color: #475569; margin: 0 0 14px; }
+    #camp2-pricing-3warianty .cpw-availability.cpw-low-stock { color: #b91c1c; font-weight: 700; }
     #camp2-pricing-3warianty .cpw-cta { display: block; width: 100%; background: var(--cpw-accent); color: #370f11; font: inherit; font-size: 14px; font-weight: 700; text-align: center; padding: 16px 8px; border: 0; border-radius: 8px; text-decoration: none; transition: background-color .2s ease, transform .2s ease; }
     #camp2-pricing-3warianty .cpw-cta:hover { background: var(--cpw-hover); transform: translateY(-1px); }
     #camp2-pricing-3warianty .cpw-cta:focus-visible { outline: 3px solid #370f11; outline-offset: 3px; }
@@ -258,8 +259,10 @@
             card.node.classList.toggle('cpw-sold-out', soldOut);
             setText(card.badge, soldOut ? 'Wyprzedane' : (card.item.badge || ''));
             card.badge.hidden = !soldOut && !card.item.badge;
+            card.availability.hidden = remaining !== null && remaining >= 10;
+            card.availability.classList.toggle('cpw-low-stock', remaining !== null && remaining < 10);
             setText(card.availability, remaining === null ? 'Sprawdź dostępność w koszyku'
-                : soldOut ? 'Brak wolnych miejsc' : 'Pozostało ' + remaining + ' ' + seatWord(remaining));
+                : soldOut ? 'Brak wolnych miejsc' : remaining < 10 ? 'Pozostało ' + remaining + ' ' + seatWord(remaining) : '');
             card.cta.setAttribute('aria-disabled', String(soldOut));
             if (soldOut) {
                 card.cta.removeAttribute('href');
