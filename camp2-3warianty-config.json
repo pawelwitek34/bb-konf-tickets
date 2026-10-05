@@ -18,13 +18,27 @@
       "highlight": "Wszystko w jednym miejscu — Hotel Beskidzki Raj.",
       "payments": {
         "once": {
-          "promo": { "amount": 3670, "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=1" },
-          "final": { "amount": 3770, "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=1" }
+          "promo": {
+            "amount": 3670,
+            "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=1"
+          },
+          "final": {
+            "amount": 3770,
+            "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=1"
+          }
         },
         "installments": {
           "enabled": false,
-          "promo": { "count": null, "amount": null, "cartLink": null },
-          "final": { "count": null, "amount": null, "cartLink": null }
+          "promo": {
+            "count": 3,
+            "amount": 1224,
+            "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2025"
+          },
+          "final": {
+            "count": 3,
+            "amount": 1257,
+            "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2025"
+          }
         }
       }
     },
@@ -32,7 +46,7 @@
       "id": "B",
       "name": "Pakiet Komfort",
       "subtitle": "Hotel Jawor + dedykowany transfer",
-      "badge": "Pula limitowana: 10 miejsc",
+      "badge": "Pula limitowana",
       "features": [
         "Pełny program warsztatowy",
         "Wyżywienie i wieczorne imprezy w Hotelu Beskidzki Raj",
@@ -42,13 +56,27 @@
       "highlight": "Gwarantowany transport: prywatny bus między hotelami rano i po zakończeniu wieczornych integracji.",
       "payments": {
         "once": {
-          "promo": { "amount": 2970, "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=2" },
-          "final": { "amount": 3070, "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=2" }
+          "promo": {
+            "amount": 2970,
+            "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=2"
+          },
+          "final": {
+            "amount": 3070,
+            "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=2"
+          }
         },
         "installments": {
           "enabled": false,
-          "promo": { "count": null, "amount": null, "cartLink": null },
-          "final": { "count": null, "amount": null, "cartLink": null }
+          "promo": {
+            "count": 3,
+            "amount": 990,
+            "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2026"
+          },
+          "final": {
+            "count": 3,
+            "amount": 1024,
+            "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2026"
+          }
         }
       }
     },
@@ -56,7 +84,7 @@
       "id": "C",
       "name": "Day Pass",
       "subtitle": "Pakiet warsztatowy bez noclegu",
-      "badge": "Pula limitowana: 20 miejsc",
+      "badge": "Pula limitowana",
       "features": [
         "Udział w warsztatach przez cały Camp",
         "Obiady i kolacje w cenie",
@@ -66,13 +94,27 @@
       "highlight": "Cały Camp i wspólne wieczory — nocleg organizujesz samodzielnie.",
       "payments": {
         "once": {
-          "promo": { "amount": 2470, "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=3" },
-          "final": { "amount": 2570, "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=3" }
+          "promo": {
+            "amount": 2470,
+            "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=3"
+          },
+          "final": {
+            "amount": 2570,
+            "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=3"
+          }
         },
         "installments": {
           "enabled": false,
-          "promo": { "count": null, "amount": null, "cartLink": null },
-          "final": { "count": null, "amount": null, "cartLink": null }
+          "promo": {
+            "count": 3,
+            "amount": 824,
+            "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2027"
+          },
+          "final": {
+            "count": 3,
+            "amount": 857,
+            "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2027"
+          }
         }
       }
     }
