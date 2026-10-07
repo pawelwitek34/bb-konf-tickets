@@ -7,7 +7,7 @@
     {
       "id": "A",
       "name": "Pakiet dla 1 osoby",
-      "subtitle": "Hotel Beskidzki Raj",
+      "subtitle": "Hotel Beskidzki Raj · 1 miejsce w pokoju 2\u2011 lub 3\u2011osobowym",
       "badge": "Ostatnie wolne miejsca!",
       "features": [
         "Pełny program warsztatowy",
@@ -31,12 +31,12 @@
           "enabled": true,
           "promo": {
             "count": 3,
-            "amount": 1224,
+            "amount": 1324,
             "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2025"
           },
           "final": {
             "count": 3,
-            "amount": 1257,
+            "amount": 1357,
             "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2025"
           }
         }
@@ -70,12 +70,12 @@
           "enabled": true,
           "promo": {
             "count": 3,
-            "amount": 2346,
+            "amount": 2447,
             "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2032"
           },
           "final": {
             "count": 3,
-            "amount": 2413,
+            "amount": 2514,
             "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2032"
           }
         }
@@ -152,12 +152,12 @@
           "enabled": true,
           "promo": {
             "count": 3,
-            "amount": 824,
+            "amount": 924,
             "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2027"
           },
           "final": {
             "count": 3,
-            "amount": 857,
+            "amount": 957,
             "cartLink": "https://badzblizej.pl/?empty-cart=1&add-to-cart=2027"
           }
         }
