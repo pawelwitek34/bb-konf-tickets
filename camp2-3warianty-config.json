@@ -7,13 +7,18 @@
     {
       "id": "A",
       "name": "Pakiet dla 1 osoby",
-      "subtitle": "Hotel Beskidzki Raj · 1 miejsce w pokoju 2\u2011 lub 3\u2011osobowym",
+      "subtitle": "Cały 4\u2011dniowy Camp + 3 noclegi w\u00a0Hotelu\u00a0Beskidzki\u00a0Raj***",
       "badge": "Ostatnie wolne miejsca!",
       "features": [
-        "Pełny program warsztatowy",
-        "Pełne wyżywienie",
-        "Udział we wszystkich integracjach",
-        "Nocleg bezpośrednio na terenie głównego kompleksu"
+        "**4 dni programu:** czwartek–niedziela",
+        "**5 warsztatów i prelekcji** dla par i solo",
+        "**3 poranne rozgrzewki** z Arturem",
+        "**3 wieczory integracyjne**",
+        "**Beskidzka Biesiada** przy grillu",
+        "**Wyjście w góry** z przewodnikiem",
+        "**Strefa wellness:** basen, jacuzzi, sauny",
+        "**3 noclegi** w Hotelu Beskidzki Raj***\nmiejsce w pokoju 2\u2011 lub 3\u2011osobowym",
+        "**Pełne wyżywienie:** śniadania, obiady, kolacje"
       ],
       "highlight": "Wszystko w jednym miejscu — Hotel Beskidzki Raj.",
       "payments": {
@@ -46,15 +51,20 @@
     {
       "id": "A2",
       "name": "Pakiet dla 2 osób",
-      "subtitle": "Hotel Beskidzki Raj · jeden bilet dla dwóch osób",
+      "subtitle": "Cały 4\u2011dniowy Camp + 3 noclegi w\u00a0Hotelu\u00a0Beskidzki\u00a0Raj***",
       "badge": "Dla dwojga",
       "features": [
-        "Pełny program warsztatowy dla 2 osób",
-        "Pełne wyżywienie",
-        "Udział we wszystkich integracjach",
-        "Nocleg bezpośrednio na terenie głównego kompleksu"
+        "**4 dni programu:** czwartek–niedziela",
+        "**5 warsztatów i prelekcji** dla par i solo",
+        "**3 poranne rozgrzewki** z Arturem",
+        "**3 wieczory integracyjne**",
+        "**Beskidzka Biesiada** przy grillu",
+        "**Wyjście w góry** z przewodnikiem",
+        "**Strefa wellness:** basen, jacuzzi, sauny",
+        "**3 noclegi** w Hotelu Beskidzki Raj***\nwspólny pokój 2\u2011osobowy",
+        "**Pełne wyżywienie:** śniadania, obiady, kolacje"
       ],
-      "highlight": "Jedziecie we dwoje? Wychodzi taniej niż dwa osobne pakiety dla 1 osoby.",
+      "highlight": "Jedziecie we dwoje? Płacicie **300 zł mniej** niż za dwa osobne pakiety.",
       "payments": {
         "once": {
           "promo": {
@@ -128,15 +138,20 @@
     {
       "id": "C",
       "name": "Pakiet bez noclegu",
-      "subtitle": "Warsztaty, wyżywienie, integracje",
+      "subtitle": "Cały 4\u2011dniowy Camp\nNocleg i śniadania we własnym zakresie",
       "badge": "Pula limitowana",
       "features": [
-        "Udział w warsztatach przez cały Camp",
-        "Obiady i kolacje w cenie",
-        "Wstęp na wieczorne integracje w Hotelu Beskidzki Raj",
-        "Nocleg we własnym zakresie — bez śniadań"
+        "**4 dni programu:** czwartek–niedziela",
+        "**5 warsztatów i prelekcji** dla par i solo",
+        "**3 poranne rozgrzewki** z Arturem",
+        "**3 wieczory integracyjne**",
+        "**Beskidzka Biesiada** przy grillu",
+        "**Wyjście w góry** z przewodnikiem",
+        "✕ **Bez strefy wellness**",
+        "✕ **Bez noclegu** — śpisz u siebie",
+        "**Obiady i kolacje** w cenie"
       ],
-      "highlight": "Cały Camp i wspólne wieczory — nocleg organizujesz samodzielnie.",
+      "highlight": "Cały Camp i wspólne wieczory — noclegi i śniadania organizujesz samodzielnie.",
       "payments": {
         "once": {
           "promo": {
