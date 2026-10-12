@@ -3,6 +3,7 @@
   "timezone": "Europe/Warsaw",
   "pricingSwitchAt": "2026-10-11T00:00:00+02:00",
   "eventStart": "2026-10-22T10:00:00+02:00",
+  "lowStockBelow": 0,
   "packages": [
     {
       "id": "A",
@@ -69,11 +70,11 @@
         "once": {
           "promo": {
             "amount": 7040,
-            "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-add-to-checkout=1981&aero-qty=2&aero-coupons=camp-pakietglowny-2osoby"
+            "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=2"
           },
           "final": {
             "amount": 7240,
-            "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-add-to-checkout=1981&aero-qty=2&aero-coupons=camp-pakietglowny-2osoby"
+            "cartLink": "https://badzblizej.pl/checkouts/camp/?aero-default=2"
           }
         },
         "installments": {
