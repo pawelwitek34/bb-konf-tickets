@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-17T15:26:22+00:00",
+  "updatedAt": "2026-10-17T15:27:16+00:00",
   "packages": {
     "A": {"remaining": 6},
-    "B": {"remaining": 8},
+    "B": {"remaining": 7},
     "C": {"remaining": 19}
   }
 }
